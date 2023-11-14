@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -7,13 +7,13 @@ const Header = () => {
                 <div className="row">
                     <div className="12u">
                         <section id="header">
-                            <h1><a href="#">Dopetrope</a></h1>
+                            <h1><Link className="home" to="/">Dopetrope</Link></h1>
                             <nav id="nav" className="mobileUI-site-nav">
                                 <ul>
-                                    <li className="current_page_item"><a href="index.html">Home</a></li>
-                                    <li><a href="right-sidebar.html">Catalog</a></li>
-                                    <li><a href="left-sidebar.html">Blog</a></li>
-                                    <li><a href="no-sidebar.html">About</a></li>
+                                    <li><Link to="/">Home</Link></li>
+                                    <li><Link to="/catalog">Catalog</Link></li>
+                                    <li><Link to="/blog">Blog</Link></li>
+                                    <li><Link to="/about">About</Link></li>
                                     <li><a href="#">Log in</a></li>
                                 </ul>
                             </nav>
