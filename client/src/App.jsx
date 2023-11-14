@@ -1,4 +1,4 @@
-import Blog from "./components/Blog/Blog.jsx"
+import Main from "./components/main/Main.jsx"
 
 import Footer from "./components/Footer/Footer.jsx"
 import Header from "./components/Header/Header.jsx"
@@ -17,7 +17,7 @@ function App() {
       <div id="main-wrapper">
         <div className="5grid-layout">
     
-          <Blog />
+          <Main />
         </div>
       </div>
 

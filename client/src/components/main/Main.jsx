@@ -1,4 +1,4 @@
-const Blog = () => {
+const Main = () => {
     return (
         <div className="row">
             <div className="12u">
@@ -108,4 +108,4 @@ const Blog = () => {
     )
 }
 
-export default Blog;
+export default Main;
