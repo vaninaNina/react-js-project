@@ -44,14 +44,7 @@ const Footer = () => {
               <a href="#" className="image image-full">
                 <img src="images/pic10.jpg" alt="" />
               </a>
-              <p>
-                This is Dopetrope a free, fully responsive HTML5 site template
-                by AJ for HTML5 Up! It's released for free under the CCA license
-                so feel free to use it for any personal or commercial project
-                &ndash; just don't forget to credit us! <strong>PS:</strong> The
-                awesome placeholder artwork used in this design is courtesy of
-                Dreametry Doodle.
-              </p>
+              <p>Footer</p>
               <footer>
                 <a href="#" className="button">
                   Find out more
