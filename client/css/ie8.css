@@ -8,25 +8,22 @@
 /* Wrappers                                                                      */
 /*********************************************************************************/
 
-	/* #header-wrapper
+/* #header-wrapper
 	{
 	} */
 
-		#header-wrapper:before
-		{
-			display: none;
-		}
+#header-wrapper:before {
+  display: none;
+}
 
-		#header-wrapper:after
-		{
-			display: none;
-		}
+#header-wrapper:after {
+  display: none;
+}
 
-	/* #footer-wrapper
+/* #footer-wrapper
 	{
 	} */
 
-		#footer-wrapper:before
-		{
-			display: none;
-		}
+#footer-wrapper:before {
+  display: none;
+}
