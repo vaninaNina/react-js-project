@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import '../login/login.css';
+import { AuthContext } from '../../context/auth-context.jsx';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-
+  const { currentUser, authenticateUser } = useContext(AuthContext);
+  console.log(currentUser);
   const handleSubmit = event => {
     event.preventDefault();
     if (email.length < 1) {
@@ -16,6 +18,7 @@ const Login = () => {
     }
     setLoading(true);
     setTimeout(() => {
+      authenticateUser();
       setLoading(false);
     }, 1000);
   };

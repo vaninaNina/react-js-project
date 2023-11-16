@@ -1,16 +1,17 @@
-import Main from './components/main/Main.jsx';
-import Footer from './components/footer/Footer.jsx';
-import Header from './components/header/Header.jsx';
-import { Routes, Route } from 'react-router-dom';
-import Catalog from './components/Catalog/Catalog.jsx';
-import Blog from './components/Blog/Blog.jsx';
-import About from './components/about/About.jsx';
-import Login from './components/login/Login.jsx';
-import Signin from './components/register/Signin.jsx';
+import Main from "./components/main/Main.jsx";
+import Footer from "./components/footer/Footer.jsx";
+import Header from "./components/header/Header.jsx";
+import { Routes, Route } from "react-router-dom";
+import Catalog from "./components/Catalog/Catalog.jsx";
+import Blog from "./components/Blog/Blog.jsx";
+import About from "./components/about/About.jsx";
+import Login from "./components/login/Login.jsx";
+import Signin from "./components/register/Signin.jsx";
+import { AuthProvider } from "./context/auth-context.jsx";
 
 function App() {
   return (
-    <>
+    <AuthProvider>
       <Header />
       <div id="main-wrapper">
         <div className="5grid-layout">
@@ -25,7 +26,7 @@ function App() {
         </div>
       </div>
       <Footer />
-    </>
+    </AuthProvider>
   );
 }
 

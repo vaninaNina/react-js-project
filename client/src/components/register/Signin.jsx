@@ -16,7 +16,7 @@ const Signin = () => {
         <button type="submit">Sign In</button>
         {/* <span>If you already have profile, click <Link to={ <Login /> }>here</Link></span> */}
       </form>
-      <Link to="/register">Already have an account? Login here</Link>
+      <Link to="/login">Already have an account? Login here</Link>
     </div>
   );
 };
