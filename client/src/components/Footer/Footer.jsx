@@ -30,9 +30,9 @@ const Footer = () => {
                 <h2>What's this all about?</h2>
               </header>
               <p>
-                On 22 of December, we will launch the newest NFT colletion in
-                the OpenSea market. Here you have the opportunity to review the
-                colletion and choose the NFT(s) in which you want to invest.
+                On 22 December, we will launch the newest NFT colletion in the
+                OpenSea market. Here you will have the opportunity to review the
+                collection and choose the NFT(s) in which you want to invest.
               </p>
               <footer>
                 <p>Footer</p>
