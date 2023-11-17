@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const DescriptionCard = ({ title, description, badgeClass, iconClass }) => {
   return (
-    <div className="4u">
+    <div className="4u" key={title}>
       <section className="first">
         <span className={badgeClass}>
           <span className={iconClass} />

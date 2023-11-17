@@ -2,6 +2,7 @@ import DescriptionCard from "./subcomponents/description_card.jsx";
 import NftCard from "./subcomponents/ntf_card.jsx";
 
 const MainPage = () => {
+  let i = 0;
   return (
     <div className="row">
       <div className="12u">
@@ -45,30 +46,13 @@ const MainPage = () => {
                 },
               ].map((item) => (
                 <DescriptionCard
+                  key={item.title}
                   title={item.title}
                   badgeClass={item.badgeClass}
                   iconClass={item.iconClass}
                   description={item.description}
                 />
               ))}
-              {/* <DescriptionCard
-                title="Purpose"
-                badgeClass="pennant"
-                iconClass="icon64 icon64-1"
-                description="The aim of the DopeTrope NTF world is to share the newest NFT pieces. You can find the information about the price and the release date so you can prepare to deep-dive into this NTF world and invest in unique art pieces."
-              />
-              <DescriptionCard
-                title="Find your piece(s)"
-                badgeClass="pennant pennant-alt"
-                iconClass="icon64 icon64-2"
-                description=" We have a large collection of art NTF pieces from which you can choose the one that is most aligned to your personality."
-              />
-              <DescriptionCard
-                title="Share your art"
-                badgeClass="pennant pennant-alt2"
-                iconClass="icon64 icon64-3"
-                description="You have the opportunity to share your art - you need only to log into your account and create a new post which will be added to our catalog."
-              /> */}
             </div>
           </div>
           <div className="actions">
@@ -105,71 +89,12 @@ const MainPage = () => {
                 },
               ].map((item) => (
                 <NftCard
+                  key={item.title}
                   title={item.title}
                   description={item.description}
                   image={item.image}
                 />
               ))}
-              {/* <div className="4u">
-                <section className="box">
-                  <a href="#" className="image image-full">
-                    <img src="images/pic03.jpg" alt="" />
-                  </a>
-                  <header>
-                    <h3>Sed etiam lorem nulla</h3>
-                  </header>
-                  <p>
-                    Lorem ipsum dolor sit amet sit veroeros sed amet blandit
-                    consequat veroeros lorem blandit adipiscing et feugiat
-                    phasellus tempus dolore ipsum lorem dolore.
-                  </p>
-                  <footer>
-                    <a href="/catalog" className="button button-alt">
-                      Find out more
-                    </a>
-                  </footer>
-                </section>
-              </div>
-              <div className="4u">
-                <section className="box">
-                  <a href="#" className="image image-full">
-                    <img src="images/pic04.jpg" alt="" />
-                  </a>
-                  <header>
-                    <h3>Consequat et tempus</h3>
-                  </header>
-                  <p>
-                    Lorem ipsum dolor sit amet sit veroeros sed amet blandit
-                    consequat veroeros lorem blandit adipiscing et feugiat
-                    phasellus tempus dolore ipsum lorem dolore.
-                  </p>
-                  <footer>
-                    <a href="/catalog" className="button button-alt">
-                      Find out more
-                    </a>
-                  </footer>
-                </section>
-              </div>
-              <div className="4u">
-                <section className="box">
-                  <a href="#" className="image image-full">
-                    <img src="images/pic07.jpg" alt="" />
-                  </a>
-                  <header>
-                    <h3>Dolore nisl feugiat</h3>
-                  </header>
-                  <p>
-                    Lorem ipsum dolor sit amet sit veroeros sed amet blandit
-                    consequat veroeros lorem blandit adipiscing et feugiat
-                    phasellus tempus dolore ipsum lorem dolore.
-                  </p>
-                  <footer>
-                    <a href="#" className="button button-alt">
-                      Find out more
-                    </a>
-                  </footer>
-                </section>
-              </div> */}
             </div>
           </div>
         </section>

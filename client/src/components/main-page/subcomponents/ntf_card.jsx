@@ -2,7 +2,7 @@ import React from "react";
 
 const NftCard = ({ title, description, image }) => {
   return (
-    <div className="4u">
+    <div className="4u" key={title}>
       <section className="box">
         <a href="#" className="image image-full">
           <img src={image} alt="" />
