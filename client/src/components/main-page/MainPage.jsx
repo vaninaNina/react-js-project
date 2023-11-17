@@ -1,4 +1,5 @@
 import DescriptionCard from "./subcomponents/description_card.jsx";
+import NftCard from "./subcomponents/ntf_card.jsx";
 
 const MainPage = () => {
   return (
@@ -83,7 +84,33 @@ const MainPage = () => {
           </header>
           <div className="5grid">
             <div className="row">
-              <div className="4u">
+              {[
+                {
+                  title: "Sed etiam lorem nulla",
+                  description:
+                    "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                  image: "images/pic03.jpg",
+                },
+                {
+                  title: "Consequat et tempus",
+                  description:
+                    "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                  image: "images/pic04.jpg",
+                },
+                {
+                  title: "Dolore nisl feugiat",
+                  description:
+                    "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                  image: "images/pic07.jpg",
+                },
+              ].map((item) => (
+                <NftCard
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
+                />
+              ))}
+              {/* <div className="4u">
                 <section className="box">
                   <a href="#" className="image image-full">
                     <img src="images/pic03.jpg" alt="" />
@@ -142,7 +169,7 @@ const MainPage = () => {
                     </a>
                   </footer>
                 </section>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -177,7 +204,7 @@ const MainPage = () => {
                       href="#"
                       className="button button-alt button-icon button-icon-2"
                     >
-                      33 comments
+                      comments
                     </a>
                   </footer>
                 </section>
@@ -207,7 +234,7 @@ const MainPage = () => {
                       href="#"
                       className="button button-alt button-icon button-icon-2"
                     >
-                      33 comments
+                      comments
                     </a>
                   </footer>
                 </section>
