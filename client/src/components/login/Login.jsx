@@ -1,20 +1,20 @@
-import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 
-import '../login/login.css';
-import { AuthContext } from '../../context/auth-context.jsx';
+import "../login/login.css";
+import { AuthContext } from "../../context/auth-context.jsx";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const { currentUser, authenticateUser } = useContext(AuthContext);
   console.log(currentUser);
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     if (email.length < 1) {
-      setEmailError('Field cannot be empty');
+      setEmailError("Field cannot be empty");
     }
     setLoading(true);
     setTimeout(() => {
@@ -30,7 +30,7 @@ const Login = () => {
         <label htmlFor="username">Username or Email:</label>
         <input
           value={email}
-          onChange={event => setEmail(event.target.value)}
+          onChange={(event) => setEmail(event.target.value)}
           type="text"
           id="username"
           name="username"
@@ -38,16 +38,16 @@ const Login = () => {
         {emailError ? <p>{emailError}</p> : null}
         <label htmlFor="password">Password:</label>
         <input
-          onChange={event => setPassword(event.target.value)}
+          onChange={(event) => setPassword(event.target.value)}
           value={password}
           type="password"
           id="password"
           name="password"
         />
 
-        <button type="submit">{loading ? 'Loading...' : 'Sign In'}</button>
+        <button type="submit">{loading ? "Loading..." : "Sign In"}</button>
       </form>
-      <Link to="/register">Dont have account? Register here</Link>
+      <Link to="/register">Don't have an account? Register here</Link>
     </div>
   );
 };

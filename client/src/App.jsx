@@ -5,9 +5,9 @@ import Catalog from "./components/catalog/Catalog.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import About from "./components/about/About.jsx";
 import Login from "./components/login/Login.jsx";
-import Signin from "./components/register/Signin.jsx";
 import { AuthProvider } from "./context/auth-context.jsx";
 import MainPage from "./components/main-page/MainPage.jsx";
+import Register from "./components/register/Register.jsx";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/login" element={<Login />}></Route>
-            <Route path="/register" element={<Signin />}></Route>
+            <Route path="/register" element={<Register />}></Route>
           </Routes>
         </div>
       </div>

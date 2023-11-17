@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // const user = false;
@@ -28,7 +28,7 @@ const Header = () => {
                     <Link to="/about">About</Link>
                   </li>
                   <li>
-                    <Link to="/login">Log In</Link>
+                    <Link to="/login">Account</Link>
                   </li>
                   {/* {user ? null : <li><Link to="/login">Log In</Link></li>} */}
                 </ul>
