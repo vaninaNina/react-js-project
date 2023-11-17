@@ -6,12 +6,12 @@ const Footer = () => {
           <div className="8u">
             <section>
               <header>
-                <h2>Blandit nisl adipiscing</h2>
+                <h2>Next Release</h2>
               </header>
               <ul className="dates">
                 <li>
                   <span className="date">
-                    Jan <strong>27</strong>
+                    Dec <strong>22</strong>
                   </span>
                   <h3>
                     <a href="#">Lorem dolor sit amet veroeros</a>
@@ -19,18 +19,6 @@ const Footer = () => {
                   <p>
                     Ipsum dolor sit amet veroeros consequat blandit ipsum
                     phasellus lorem consequat etiam.
-                  </p>
-                </li>
-                <li>
-                  <span className="date">
-                    Jan <strong>23</strong>
-                  </span>
-                  <h3>
-                    <a href="#">Ipsum sed blandit nisl consequat</a>
-                  </h3>
-                  <p>
-                    Blandit phasellus lorem ipsum dolor tempor sapien tortor
-                    hendrerit adipiscing feugiat lorem.
                   </p>
                 </li>
               </ul>
@@ -41,14 +29,13 @@ const Footer = () => {
               <header>
                 <h2>What's this all about?</h2>
               </header>
-              <a href="#" className="image image-full">
-                <img src="images/pic10.jpg" alt="" />
-              </a>
-              <p>Footer</p>
+              <p>
+                On 22 of December, we will launch the newest NFT colletion in
+                the OpenSea market. Here you have the opportunity to review the
+                colletion and choose the NFT(s) in which you want to invest.
+              </p>
               <footer>
-                <a href="#" className="button">
-                  Find out more
-                </a>
+                <p>Footer</p>
               </footer>
             </section>
           </div>
