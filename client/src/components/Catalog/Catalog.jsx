@@ -1,3 +1,5 @@
+import NftCard from "../main-page/subcomponents/ntf_card.jsx";
+import "../../components/catalog/catalog-style.css";
 const Catalog = () => {
   return (
     <div className="row">
@@ -6,11 +8,71 @@ const Catalog = () => {
           <div className="5grid">
             <div className="row">
               <div className="8u mobileUI-main-content">
-                <article className="box is-post">
+                <section className="catalog">
+                  <header className="major">
+                    <h2>Catalog</h2>
+                  </header>
+                  <div className="5grid">
+                    <div className="new-row">
+                      {[
+                        {
+                          title: "Sed etiam lorem nulla",
+                          description:
+                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                          image: "images/pic03.jpg",
+                        },
+                        {
+                          title: "Consequat et tempus",
+                          description:
+                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                          image: "images/pic04.jpg",
+                        },
+                        {
+                          title: "Dolore nisl feugiat",
+                          description:
+                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                          image: "images/pic07.jpg",
+                        },
+                        {
+                          title: "Tatata",
+                          description:
+                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                          image: "images/pic01.jpg",
+                        },
+                        {
+                          title: "ghhghgh",
+                          description:
+                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                          image: "images/pic02.jpg",
+                        },
+                        {
+                          title: "art",
+                          description:
+                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                          image: "images/pic05.jpg",
+                        },
+                        {
+                          title: "gasha",
+                          description:
+                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
+                          image: "images/pic06.jpg",
+                        },
+                      ].map((item) => (
+                        <NftCard
+                          key={item.title}
+                          title={item.title}
+                          description={item.description}
+                          image={item.image}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </section>
+                {/*<article className="box is-post">
                   <a href="#" className="image image-full">
                     <img src="images/pic01.jpg" alt="" />
                   </a>
-                  <header>
+                   <header>
                     <h2>Right sidebar</h2>
                     <span className="byline">
                       Lorem ipsum dolor sit amet feugiat
@@ -78,8 +140,9 @@ const Catalog = () => {
                       semper risus et lectus commodo fringilla. Maecenas
                       sagittis convallis justo vel mattis.
                     </p>
-                  </section>
+  </section> 
                 </article>
+             
               </div>
               <div className="4u">
                 <section className="box">
@@ -109,26 +172,7 @@ const Catalog = () => {
                     adipiscing et feugiat sed lorem consequat feugiat lorem
                     dolore.
                   </p>
-                  <ul className="divided">
-                    <li>
-                      <a href="#">Sed et blandit consequat sed</a>
-                    </li>
-                    <li>
-                      <a href="#">Hendrerit tortor vitae sapien dolore</a>
-                    </li>
-                    <li>
-                      <a href="#">Sapien id suscipit magna sed felis</a>
-                    </li>
-                    <li>
-                      <a href="#">Aptent taciti sociosqu ad litora</a>
-                    </li>
-                  </ul>
-                  <footer>
-                    <a href="#" className="button button-alt">
-                      Ipsum consequat
-                    </a>
-                  </footer>
-                </section>
+                </section> */}
               </div>
             </div>
           </div>
