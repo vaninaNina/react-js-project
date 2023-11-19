@@ -128,7 +128,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -182,7 +182,6 @@ table {
 .\35 grid .\31 u,
 .\35 grid .\32 u,
 .\35 grid .\33 u,
-.\35 grid .\34 u,
 .\35 grid .\35 u,
 .\35 grid .\36 u,
 .\35 grid .\37 u,
@@ -197,7 +196,7 @@ table {
 }
 
 .\35 grid:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
   height: 0;
@@ -306,12 +305,12 @@ table {
 .do-5grid .do-11u,
 .do-5grid .do-12u {
   /*margin: 1% 0 1% 2%;*/
-  margin: 1.5% 0 1.5% 3%;
-  float: left;
+  margin: 0 0 0 0;
+  float: center;
 }
 
 .do-5grid:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
   height: 0;

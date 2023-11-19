@@ -7,7 +7,8 @@ const Catalog = () => {
         <section>
           <div className="5grid">
             <div className="row">
-              <div className="8u mobileUI-main-content">
+              <div>
+                {/* /*className="8u mobileUI-main-content" */}
                 <section className="catalog">
                   <header className="major">
                     <h2>Catalog</h2>
@@ -32,12 +33,6 @@ const Catalog = () => {
                           description:
                             "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
                           image: "images/pic07.jpg",
-                        },
-                        {
-                          title: "Tatata",
-                          description:
-                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                          image: "images/pic01.jpg",
                         },
                         {
                           title: "ghhghgh",
