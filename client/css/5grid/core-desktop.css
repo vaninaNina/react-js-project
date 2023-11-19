@@ -4,7 +4,7 @@
 /*****************************************************************/
 
 .\35 grid .row:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
   height: 0;
@@ -16,7 +16,7 @@
   margin-top: 0;
 }
 .\35 grid .row:last-child > * {
-  margin-bottom: 0;
+  margin-bottom: 2em;
 }
 .\35 grid .offset-1u:first-child {
   margin-left: 8.5% !important;

@@ -28,11 +28,7 @@ const Blog = () => {
                   <header>
                     <h3>Content</h3>
                   </header>
-                  <p>
-                    Veroeros sed amet blandit consequat veroeros lorem blandit
-                    adipiscing et feugiat sed lorem consequat feugiat lorem
-                    dolore.
-                  </p>
+                  <p>Review the current NTF colletion</p>
                   <ul className="divided">
                     <li>
                       <a href="#">Sed et blandit consequat sed</a>
@@ -42,6 +38,12 @@ const Blog = () => {
                     </li>
                     <li>
                       <a href="#">Sapien id suscipit magna sed felis</a>
+                    </li>
+                    <li>
+                      <a href="#">Aptent taciti sociosqu ad litora</a>
+                    </li>
+                    <li>
+                      <a href="#">Aptent taciti sociosqu ad litora</a>
                     </li>
                     <li>
                       <a href="#">Aptent taciti sociosqu ad litora</a>
