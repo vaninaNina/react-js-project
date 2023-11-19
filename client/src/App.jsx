@@ -8,6 +8,7 @@ import Login from "./components/login/Login.jsx";
 import { AuthProvider } from "./context/auth-context.jsx";
 import MainPage from "./components/main-page/MainPage.jsx";
 import Register from "./components/register/Register.jsx";
+import Create from "./components/createNft/Create.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
+            <Route path="/create" element={<Create />}></Route>
           </Routes>
         </div>
       </div>
