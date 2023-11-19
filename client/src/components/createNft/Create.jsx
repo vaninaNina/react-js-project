@@ -4,14 +4,16 @@ const Create = () => {
   const createNftSubmitHandler = (e) => {
     e.preventDefault();
 
-    const { title, description, price, releaseDate, author, imageUrl } =
-      Object.fromEntries(new FormData(e.currentTarget));
+    // { title, description, price, releaseDate, author, imageUrl } - nftData
+    const nftData = Object.fromEntries(new FormData(e.currentTarget));
+
+    console.log(nftData);
   };
 
   return (
     <div className="container">
       <h2>Create NFT post</h2>
-      <form>
+      <form onSubmit={createNftSubmitHandler}>
         <label htmlFor="title">Title:</label>
         <input type="text" id="title" name="title" required />
 
