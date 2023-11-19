@@ -56,7 +56,7 @@ const MainPage = () => {
             </div>
           </div>
           <div className="actions">
-            <a href="#" className="button button-big">
+            <a href="/catalog" className="button button-big">
               Get Started
             </a>
           </div>
@@ -111,7 +111,7 @@ const MainPage = () => {
                   </a>
                   <header>
                     <h3>Magna tempus consequat lorem</h3>
-                    <span className="byline">Posted 45 minutes ago</span>
+                    {/* <span className="byline">Posted 45 minutes ago</span> */}
                   </header>
                   <p>
                     Lorem ipsum dolor sit amet sit veroeros sed et blandit
@@ -141,7 +141,7 @@ const MainPage = () => {
                   </a>
                   <header>
                     <h3>Aptent veroeros et aliquam</h3>
-                    <span className="byline">Posted 45 minutes ago</span>
+                    {/* <span className="byline">Posted 45 minutes ago</span> */}
                   </header>
                   <p>
                     Lorem ipsum dolor sit amet sit veroeros sed et blandit

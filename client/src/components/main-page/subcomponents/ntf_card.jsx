@@ -13,7 +13,7 @@ const NftCard = ({ title, description, image }) => {
         <p>{description}</p>
         <footer>
           <a href="/catalog" className="button button-alt">
-            Find out more
+            More details
           </a>
         </footer>
       </section>
