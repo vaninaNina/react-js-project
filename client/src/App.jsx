@@ -1,11 +1,12 @@
+import { Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/auth-context.jsx";
+
 import Footer from "./components/footer/Footer.jsx";
 import Header from "./components/header/Header.jsx";
-import { Routes, Route } from "react-router-dom";
 import Catalog from "./components/catalog/Catalog.jsx";
 import Blog from "./components/Blog/Blog.jsx";
 import About from "./components/about/About.jsx";
 import Login from "./components/login/Login.jsx";
-import { AuthProvider } from "./context/auth-context.jsx";
 import MainPage from "./components/main-page/MainPage.jsx";
 import Register from "./components/register/Register.jsx";
 import Create from "./components/createNft/Create.jsx";

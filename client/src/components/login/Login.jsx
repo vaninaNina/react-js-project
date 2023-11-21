@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-
-import "../login/login.css";
 import { AuthContext } from "../../context/auth-context.jsx";
+import "../login/login.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -10,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const { currentUser, authenticateUser } = useContext(AuthContext);
-  console.log(currentUser);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     if (email.length < 1) {
@@ -27,13 +26,13 @@ const Login = () => {
     <div className="container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit} className="log-form">
-        <label htmlFor="username">Username or Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           type="text"
-          id="username"
-          name="username"
+          id="email"
+          name="email"
         />
         {emailError ? <p>{emailError}</p> : null}
         <label htmlFor="password">Password:</label>
