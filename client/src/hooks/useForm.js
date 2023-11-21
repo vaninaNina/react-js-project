@@ -11,14 +11,6 @@ export default function useForm(submitHandler, initialValues) {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (email.length < 1) {
-      setEmailError("Field cannot be empty");
-    }
-    setLoading(true);
-    setTimeout(() => {
-      authenticateUser();
-      setLoading(false);
-    }, 1000);
 
     submitHandler(values);
   };

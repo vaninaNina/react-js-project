@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./context/auth-context.jsx";
+import { AuthContext } from "./context/auth-context.jsx";
 
 import Footer from "./components/footer/Footer.jsx";
 import Header from "./components/header/Header.jsx";
@@ -10,10 +10,19 @@ import Login from "./components/login/Login.jsx";
 import MainPage from "./components/main-page/MainPage.jsx";
 import Register from "./components/register/Register.jsx";
 import Create from "./components/createNft/Create.jsx";
+import { useState } from "react";
 
 function App() {
+  //this should be removed from here
+  const [auth, setAuth] = useState({});
+
+  const loginSubmitHandler = (values) => {
+    console.log(values);
+  };
+  //
+
   return (
-    <AuthProvider>
+    <AuthContext.Provider value={{ loginSubmitHandler }}>
       <Header />
       <div id="main-wrapper">
         <div className="5grid-layout">
@@ -29,7 +38,7 @@ function App() {
         </div>
       </div>
       <Footer />
-    </AuthProvider>
+    </AuthContext.Provider>
   );
 }
 
