@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div className="form">
+    <div className="container">
       <h2>Register</h2>
       <form className="log-form">
         <label htmlFor="username">Username or Email:</label>

@@ -35,11 +35,12 @@ textarea {
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #d52349;
   color: #fff;
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
+  position: center;
   cursor: pointer;
 }
 

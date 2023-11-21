@@ -24,7 +24,7 @@ const Login = () => {
   };
 
   return (
-    <div className="form">
+    <div className="container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit} className="log-form">
         <label htmlFor="username">Username or Email:</label>
@@ -45,7 +45,7 @@ const Login = () => {
           name="password"
         />
 
-        <button type="submit">{loading ? "Loading..." : "Sign In"}</button>
+        <button type="submit">{loading ? "Loading..." : "Log In"}</button>
       </form>
       <Link to="/register">Don't have an account? Register here</Link>
     </div>

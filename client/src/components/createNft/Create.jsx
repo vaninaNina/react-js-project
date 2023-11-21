@@ -1,13 +1,14 @@
 import "../createNft/create.css";
-
+import { create } from "../../services/nftService.js";
 const Create = () => {
-  const createNftSubmitHandler = (e) => {
+  const createNftSubmitHandler = async (e) => {
     e.preventDefault();
 
     // { title, description, price, releaseDate, author, imageUrl } - nftData
     const nftData = Object.fromEntries(new FormData(e.currentTarget));
 
-    console.log(nftData);
+    const result = await create(nftData);
+    console.log(result);
   };
 
   return (
