@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/auth-context.jsx";
+import AuthContext from "../../context/authContext.jsx";
 import "../login/login.css";
 import useForm from "../../hooks/useForm.js";
 

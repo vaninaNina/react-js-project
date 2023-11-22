@@ -1,40 +1,31 @@
-import React, { useContext, useState } from "react";
-import { AuthContext } from "../../context/auth-context.jsx";
+import React, { useContext } from "react";
+import AuthContext from "../../context/authContext.jsx";
 import { Link } from "react-router-dom";
 import "../login/login.css";
+import useForm from "../../hooks/useForm.js";
+
+const RegisterFormKeys = {
+  Email: "email",
+  Password: "password",
+  ConfirmPassword: "confirm-password",
+};
 
 const Register = () => {
-  const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmationPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const { currentUser, authenticateUser } = useContext(AuthContext);
+  const { registerSubmitHandler } = useContext(AuthContext);
+  const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+    [RegisterFormKeys.Email]: "",
+    [RegisterFormKeys.Password]: "",
+    [RegisterFormKeys.ConfirmPassword]: "",
+  });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (email.length < 1) {
-      setEmailError("Field cannot be empty");
-    }
-
-    if (confirmPassword !== password) {
-      throw new Error("Passwords do not match");
-    }
-
-    setLoading(true);
-    setTimeout(() => {
-      authenticateUser();
-      setLoading(false);
-    }, 1000);
-  };
   return (
     <div className="container">
       <h2>Register</h2>
-      <form className="log-form" onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit} className="log-form">
         <label htmlFor="email">Email:</label>
         <input
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
+          value={values[RegisterFormKeys.Email]}
+          onChange={onChange}
           type="text"
           id="email"
           name="email"
@@ -42,17 +33,17 @@ const Register = () => {
 
         <label htmlFor="password">Password:</label>
         <input
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
+          value={values[RegisterFormKeys.Password]}
+          onChange={onChange}
           type="password"
           id="password"
           name="password"
         />
 
-        <label htmlFor="password">Confirm Password:</label>
+        <label htmlFor="con-password">Confirm Password:</label>
         <input
-          value={confirmPassword}
-          onChange={(event) => setConfirmationPassword(event.target.value)}
+          value={values[RegisterFormKeys.ConfirmPassword]}
+          onChange={onChange}
           type="password"
           id="confirm-password"
           name="confirm-password"
