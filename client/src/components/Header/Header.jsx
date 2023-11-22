@@ -1,7 +1,11 @@
+import "../../components/header/header.css";
+
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import AuthContext from "../../context/authContext.jsx";
 
 const Header = () => {
-  // const user = false;
+  const { isAuthenticated, username } = useContext(AuthContext);
   return (
     <div id="header-wrapper">
       <div className="5grid-layout">
@@ -25,14 +29,26 @@ const Header = () => {
                     <Link to="/blog">Blog</Link>
                   </li>
                   <li>
-                    <Link to="/create">Create</Link>
-                  </li>
-                  <li>
                     <Link to="/about">About</Link>
                   </li>
-                  <li>
-                    <Link to="/login">Account</Link>
-                  </li>
+                  {isAuthenticated && (
+                    <div id="user">
+                      <li>
+                        <Link to="/create">Create</Link>
+                      </li>
+                      <li>
+                        <Link to="/logout">Log Out</Link>
+                      </li>
+                    </div>
+                  )}
+                  {!isAuthenticated && (
+                    <div id="guest">
+                      <li>
+                        <Link to="/login">Account</Link>
+                      </li>
+                    </div>
+                  )}
+
                   {/* {user ? null : <li><Link to="/login">Log In</Link></li>} */}
                 </ul>
               </nav>
