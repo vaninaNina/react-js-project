@@ -56,7 +56,7 @@ const MainPage = () => {
             </div>
           </div>
           <div className="actions">
-            <a href="/catalog" className="button button-big">
+            <a href="/nfts" className="button button-big">
               Get Started
             </a>
           </div>

@@ -1,6 +1,6 @@
 import * as request from "../lib/requests.js";
 
-const baseUrl = "http://localhost:3030/data";
+const baseUrl = "http://localhost:3030/data/nfts";
 
 export const getAll = async () => {
   const result = await request.get(baseUrl);

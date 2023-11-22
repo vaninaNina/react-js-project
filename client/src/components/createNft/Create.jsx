@@ -1,14 +1,24 @@
 import "../createNft/create.css";
-import { create } from "../../services/nftService.js";
+
+import { useNavigate } from "react-router-dom";
+import * as nftService from "../../services/nftService.js";
+
 const Create = () => {
+  const navigate = useNavigate();
+
   const createNftSubmitHandler = async (e) => {
     e.preventDefault();
 
     // { title, description, price, releaseDate, author, imageUrl } - nftData
     const nftData = Object.fromEntries(new FormData(e.currentTarget));
 
-    const result = await create(nftData);
-    console.log(result);
+    try {
+      await nftService.create(nftData);
+      navigate("/nfts");
+    } catch (err) {
+      console.log(err);
+      alert(err);
+    }
   };
 
   return (

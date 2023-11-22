@@ -21,7 +21,7 @@ function App() {
         <div className="5grid-layout">
           <Routes>
             <Route path="/" element={<MainPage />}></Route>
-            <Route path="/catalog" element={<Catalog />}></Route>
+            <Route path="/nfts" element={<Catalog />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/login" element={<Login />}></Route>
