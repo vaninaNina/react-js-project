@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { AuthContext } from "./context/auth-context.jsx";
+import { AuthProvider } from "./context/authContext.jsx";
 
 import Footer from "./components/footer/Footer.jsx";
 import Header from "./components/header/Header.jsx";
@@ -10,19 +10,12 @@ import Login from "./components/login/Login.jsx";
 import MainPage from "./components/main-page/MainPage.jsx";
 import Register from "./components/register/Register.jsx";
 import Create from "./components/createNft/Create.jsx";
-import { useState } from "react";
+
+import Logout from "./components/logout/Logout.jsx";
 
 function App() {
-  //this should be removed from here
-  const [auth, setAuth] = useState({});
-
-  const loginSubmitHandler = (values) => {
-    console.log(values);
-  };
-  //
-
   return (
-    <AuthContext.Provider value={{ loginSubmitHandler }}>
+    <AuthProvider>
       <Header />
       <div id="main-wrapper">
         <div className="5grid-layout">
@@ -33,12 +26,13 @@ function App() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
-            <Route path="/create" element={<Create />}></Route>
+            <Route path="/catalog/create" element={<Create />}></Route>
+            <Route path="/logout" element={<Logout />}></Route>
           </Routes>
         </div>
       </div>
       <Footer />
-    </AuthContext.Provider>
+    </AuthProvider>
   );
 }
 
