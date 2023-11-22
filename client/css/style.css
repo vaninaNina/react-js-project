@@ -639,6 +639,7 @@ ul.social li.googleplus:hover {
 #footer-wrapper {
   position: relative;
   color: #858484;
+  background-color: #252122;
 }
 
 #footer-wrapper:before {
@@ -647,7 +648,7 @@ ul.social li.googleplus:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background: url("images/bg01.png");
+  background: #252122;
   background-size: 100% 100%;
   z-index: 0;
   opacity: 0.5;
