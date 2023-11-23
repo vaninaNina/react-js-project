@@ -110,26 +110,37 @@ const MainPage = () => {
                     <img src="images/pic08.jpg" alt="" />
                   </a>
                   <header>
-                    <h3>Magna tempus consequat lorem</h3>
+                    <h3>
+                      Navigating the NFT Revolution: A Beginner's Guide to
+                      Non-Fungible Tokens
+                    </h3>
                     {/* <span className="byline">Posted 45 minutes ago</span> */}
                   </header>
                   <p>
-                    Lorem ipsum dolor sit amet sit veroeros sed et blandit
-                    consequat sed veroeros lorem et blandit adipiscing feugiat
-                    phasellus tempus hendrerit, tortor vitae mattis tempor,
-                    sapien sem feugiat sapien, id suscipit magna felis nec elit.
-                    className aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos lorem ipsum dolor sit amet.
+                    In recent years, a technological wave has transformed the
+                    way we perceive and trade digital assets, and at the
+                    forefront of this revolution are Non-Fungible Tokens (NFTs).
+                    NFTs have gained unprecedented popularity, captivating the
+                    art, entertainment, and gaming industries. Let's delve into
+                    the world of NFTs, exploring what they are, how they work,
+                    and why they've become a game-changer in the digital
+                    landscape. Understanding NFTs: NFTs are unique digital
+                    assets that represent ownership or proof of authenticity of
+                    a specific item or piece of content, typically stored on a
+                    blockchain. Unlike cryptocurrencies such as Bitcoin or
+                    Ethereum, which are fungible and can be exchanged on a
+                    one-to-one basis, NFTs are indivisible and cannot be
+                    replicated.In conclusion, NFTs represent a paradigm shift in
+                    the digital economy, offering creators new ways to monetize
+                    their work and buyers unique opportunities to own and trade
+                    digital assets. As the technology continues to mature, the
+                    impact of NFTs on various industries is likely to deepen,
+                    making them a fascinating and transformative force in the
+                    world of digital ownership.
                   </p>
                   <footer className="actions">
                     <a href="#" className="button button-icon button-icon-1">
                       Continue Reading
-                    </a>
-                    <a
-                      href="#"
-                      className="button button-alt button-icon button-icon-2"
-                    >
-                      comments
                     </a>
                   </footer>
                 </section>
@@ -140,26 +151,40 @@ const MainPage = () => {
                     <img src="images/pic09.jpg" alt="" />
                   </a>
                   <header>
-                    <h3>Aptent veroeros et aliquam</h3>
+                    <h3>
+                      The Rise of NFTs in the Art World: Revolutionizing
+                      Ownership and Creativity
+                    </h3>
                     {/* <span className="byline">Posted 45 minutes ago</span> */}
                   </header>
                   <p>
-                    Lorem ipsum dolor sit amet sit veroeros sed et blandit
-                    consequat sed veroeros lorem et blandit adipiscing feugiat
-                    phasellus tempus hendrerit, tortor vitae mattis tempor,
-                    sapien sem feugiat sapien, id suscipit magna felis nec elit.
-                    className aptent taciti sociosqu ad litora torquent per
-                    conubia nostra, per inceptos lorem ipsum dolor sit amet.
+                    The art world is experiencing a revolution, and at the heart
+                    of it is the rise of Non-Fungible Tokens (NFTs). These
+                    digital tokens have disrupted traditional notions of art
+                    ownership and proven to be a game-changer for both artists
+                    and collectors. Let's explore how NFTs are reshaping the art
+                    market, offering new possibilities and challenges.NFTs have
+                    opened up unprecedented opportunities for digital artists
+                    who, in the past, struggled to monetize their work. By
+                    tokenizing digital art, creators can sell their pieces
+                    directly to a global audience, breaking down geographical
+                    barriers and reaching collectors who appreciate the unique
+                    nature of digital creations.While the NFT art market has
+                    seen tremendous success, it has not been without its share
+                    of challenges and criticisms. Environmental concerns related
+                    to the energy consumption of blockchain networks, issues of
+                    copyright infringement, and the potential for market
+                    manipulation are some of the hurdles that the NFT art space
+                    is actively addressing. In conclusion, NFTs have ushered in
+                    a new era for the art world, transforming the way we create,
+                    buy, and sell digital art. As the technology continues to
+                    evolve, the impact of NFTs on the art market is likely to
+                    grow, offering exciting possibilities for artists,
+                    collectors, and art enthusiasts alike.
                   </p>
                   <footer className="actions">
                     <a href="#" className="button button-icon button-icon-1">
                       Continue Reading
-                    </a>
-                    <a
-                      href="#"
-                      className="button button-alt button-icon button-icon-2"
-                    >
-                      comments
                     </a>
                   </footer>
                 </section>
