@@ -8,6 +8,7 @@
   display: block;
   clear: both;
   height: 0;
+  margin-bottom: 2em;
 }
 .\35 grid .row > :first-child {
   margin-left: 0;
