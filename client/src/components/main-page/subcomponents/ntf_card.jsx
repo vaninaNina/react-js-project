@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NftCard = ({ title, description, img, _id }) => {
   return (
@@ -12,9 +13,9 @@ const NftCard = ({ title, description, img, _id }) => {
         </header>
         <p>{description}</p>
         <footer>
-          <a href="/catalog" className="button button-alt">
+          <Link to={`/post/${_id}`} className="button button-alt">
             More details
-          </a>
+          </Link>
         </footer>
       </section>
     </div>
