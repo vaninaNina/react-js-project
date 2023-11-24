@@ -1,11 +1,23 @@
 import "../../components/header/header.css";
 
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../../context/authContext.jsx";
+import * as authService from "../../services/authService.js";
 
 const Header = () => {
-  const { isAuthenticated, username } = useContext(AuthContext);
+  const { isAuthenticated, username, logoutHandler } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await authService.logout();
+      logoutHandler();
+      navigate("/");
+    } catch (error) {
+      navigate("/");
+    }
+  };
   return (
     <div id="header-wrapper">
       <div className="5grid-layout">
@@ -31,25 +43,26 @@ const Header = () => {
                   <li>
                     <Link to="/about">About</Link>
                   </li>
-                  {isAuthenticated && (
+                  {isAuthenticated ? (
                     <div id="user">
                       <li>
                         <Link to="/create">Create</Link>
                       </li>
-                      <li>
-                        <Link to="/logout">Log Out</Link>
-                      </li>
+
+                      <input
+                        type="submit"
+                        style={{ width: 50 }}
+                        value="Log out"
+                        onClick={() => handleLogout()}
+                      ></input>
                     </div>
-                  )}
-                  {!isAuthenticated && (
+                  ) : (
                     <div id="guest">
                       <li>
                         <Link to="/login">Account</Link>
                       </li>
                     </div>
                   )}
-
-                  {/* {user ? null : <li><Link to="/login">Log In</Link></li>} */}
                 </ul>
               </nav>
             </section>
