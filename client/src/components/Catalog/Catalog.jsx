@@ -1,6 +1,20 @@
 import NftCard from "../main-page/subcomponents/ntf_card.jsx";
 import "../../components/catalog/catalog-style.css";
+import { useState, useEffect } from "react";
+import * as nftService from "../../services/nftService.js";
+
 const Catalog = () => {
+  const [data, setData] = useState([]);
+
+  const getData = async () => {
+    const response = await nftService.getAll();
+    setData(response);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div className="row">
       <div className="12u">
@@ -15,49 +29,15 @@ const Catalog = () => {
                   </header>
                   <div className="5grid">
                     <div className="new-row">
-                      {[
-                        {
-                          title: "Sed etiam lorem nulla",
-                          description:
-                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                          image: "images/pic03.jpg",
-                        },
-                        {
-                          title: "Consequat et tempus",
-                          description:
-                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                          image: "images/pic04.jpg",
-                        },
-                        {
-                          title: "Dolore nisl feugiat",
-                          description:
-                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                          image: "images/pic07.jpg",
-                        },
-                        {
-                          title: "ghhghgh",
-                          description:
-                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                          image: "images/pic02.jpg",
-                        },
-                        {
-                          title: "art",
-                          description:
-                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                          image: "images/pic05.jpg",
-                        },
-                        {
-                          title: "gasha",
-                          description:
-                            "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                          image: "images/pic06.jpg",
-                        },
-                      ].map((item) => (
+                      {data.map((item) => (
                         <NftCard
-                          key={item.title}
+                          _id={item._id}
                           title={item.title}
                           description={item.description}
-                          image={item.image}
+                          img={item.img}
+                          author_name={item.author_name}
+                          floor_price={item.floor_price}
+                          _ownerId={item._ownerId}
                         />
                       ))}
                     </div>

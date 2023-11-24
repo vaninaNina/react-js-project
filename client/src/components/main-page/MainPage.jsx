@@ -2,7 +2,6 @@ import DescriptionCard from "./subcomponents/description_card.jsx";
 import NftCard from "./subcomponents/ntf_card.jsx";
 
 const MainPage = () => {
-  let i = 0;
   return (
     <div className="row">
       <div className="12u">

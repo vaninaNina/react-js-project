@@ -1,11 +1,11 @@
 import React from "react";
 
-const NftCard = ({ title, description, image }) => {
+const NftCard = ({ title, description, img, _id }) => {
   return (
-    <div className="4u" key={title}>
+    <div className="4u" _id={_id}>
       <section className="box">
         <a href="#" className="image image-full">
-          <img src={image} alt="" />
+          <img src={img} alt="" />
         </a>
         <header>
           <h3>{title}</h3>
