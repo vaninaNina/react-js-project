@@ -11,8 +11,6 @@ import MainPage from "./components/main-page/MainPage.jsx";
 import Register from "./components/register/Register.jsx";
 import Create from "./components/createNft/Create.jsx";
 
-import Logout from "./components/logout/Logout.jsx";
-
 function App() {
   return (
     <AuthProvider>
@@ -27,7 +25,6 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
             <Route path="/create" element={<Create />}></Route>
-            <Route path="/logout" element={<Logout />}></Route>
           </Routes>
         </div>
       </div>
