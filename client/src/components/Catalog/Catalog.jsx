@@ -28,12 +28,13 @@ const Catalog = () => {
                     <h2>Catalog</h2>
                   </header>
                   <div className="5grid">
-                    <div className="new-row">
+                    <div className="new-row" style={{ height: "600px" }}>
                       {data.map((item) => (
                         <NftCard
+                          key={item._id}
                           _id={item._id}
                           title={item.title}
-                          description={item.description}
+                          description={`${item.description.slice(0, 100)}...`}
                           img={item.img}
                           author_name={item.author_name}
                           floor_price={item.floor_price}
