@@ -71,7 +71,7 @@ a:hover {
   position: relative;
   top: -0.65em;
   display: inline;
-  margin: 0;
+
   padding: 0 1em 0 1em;
 }
 
@@ -105,7 +105,7 @@ table {
 
 section,
 article {
-  margin-bottom: 2.5em;
+  margin-bottom: 5em;
 }
 
 section > :last-child,

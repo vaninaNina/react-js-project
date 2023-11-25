@@ -1,7 +1,23 @@
 import DescriptionCard from "./subcomponents/description_card.jsx";
 import NftCard from "./subcomponents/ntf_card.jsx";
+import { useState, useEffect } from "react";
+import * as nftService from "../../services/nftService.js";
+import "../main-page/mainp.css";
 
 const MainPage = () => {
+  const [data, setData] = useState([]);
+
+  const getData = async () => {
+    const response = await nftService.getAll();
+    setData(response);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const firstElemensts = data.slice(0, 3);
+
   return (
     <div className="row">
       <div className="12u">
@@ -54,46 +70,29 @@ const MainPage = () => {
               ))}
             </div>
           </div>
-          <div className="actions">
-            <a href="/nfts" className="button button-big">
-              Get Started
-            </a>
-          </div>
         </section>
-
         <section>
           <header className="major">
             <h2>Catalog</h2>
           </header>
           <div className="5grid">
             <div className="row">
-              {[
-                {
-                  title: "Sed etiam lorem nulla",
-                  description:
-                    "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                  image: "images/pic03.jpg",
-                },
-                {
-                  title: "Consequat et tempus",
-                  description:
-                    "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                  image: "images/pic04.jpg",
-                },
-                {
-                  title: "Dolore nisl feugiat",
-                  description:
-                    "Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.",
-                  image: "images/pic07.jpg",
-                },
-              ].map((item) => (
+              {firstElemensts.map((item) => (
                 <NftCard
-                  key={item.title}
+                  key={item._id}
                   title={item.title}
-                  description={item.description}
-                  image={item.image}
+                  description={`${item.description.slice(0, 100)}...`}
+                  img={item.img}
+                  _id={item._id}
                 />
               ))}
+            </div>
+          </div>
+          <div className="getstarted">
+            <div className="actions">
+              <a href="/nfts" className="button button-big">
+                Get Started
+              </a>
             </div>
           </div>
         </section>
