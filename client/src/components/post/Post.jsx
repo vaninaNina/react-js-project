@@ -16,7 +16,10 @@ const Post = () => {
 
   return (
     <div className="post">
-      <img src={data.img} alt="Post Image" />
+      {/*     <img src={data.img} alt="Post Image" /> */}
+      <a href="#" className="image image-full">
+        <img src={`../${data.img}`} alt="" />
+      </a>
       <h1 className="title">{data.title}</h1>
       <p className="author">Author: {data["author_name"]}</p>
       <p className="description">{data.description}</p>
