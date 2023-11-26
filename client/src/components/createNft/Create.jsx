@@ -37,7 +37,7 @@ const Create = () => {
         ></textarea>
 
         <label htmlFor="price">Price:</label>
-        <input type="text" id="price" name="price" required />
+        <input type="number" id="price" name="price" step="0.1" required />
 
         <label htmlFor="releaseDate">Release Date:</label>
         <input type="date" id="releaseDate" name="releaseDate" required />
@@ -50,7 +50,7 @@ const Create = () => {
           type="text"
           id="imageUrl"
           name="imageUrl"
-          placeholder="Upload a photo..."
+          placeholder="Place the URL image..."
         />
         <button type="submit">Create</button>
       </form>
