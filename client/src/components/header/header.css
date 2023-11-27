@@ -1,5 +1,13 @@
 #user,
 #guest {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#logout-button {
+  width: 60px;
+  background-color: #d52349;
+  color: azure;
+  border-color: #d52349;
 }

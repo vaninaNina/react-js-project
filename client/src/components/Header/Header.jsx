@@ -50,11 +50,11 @@ const Header = () => {
                       </li>
 
                       <input
+                        id="logout-button"
                         type="submit"
-                        style={{ width: 50 }}
                         value="Log out"
                         onClick={() => handleLogout()}
-                      ></input>
+                      />
                     </div>
                   ) : (
                     <div id="guest">
