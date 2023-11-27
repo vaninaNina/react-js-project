@@ -8,15 +8,19 @@ const MainPage = () => {
   const [data, setData] = useState([]);
 
   const getData = async () => {
-    const response = await nftService.getAll();
-    setData(response);
+    try {
+      const response = await nftService.getAll();
+      setData(response);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
-
   useEffect(() => {
     getData();
   }, []);
 
   const firstElemensts = data.slice(0, 3);
+  console.log("firstElemensts", data);
 
   return (
     <div className="row">
