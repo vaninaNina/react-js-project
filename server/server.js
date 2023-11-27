@@ -1339,6 +1339,41 @@
     	}
     };
     var seedData = {
+    	frontText: {
+    		"0a1b2c3d4-5e6f7a8-9b1c2d3-4e5f6a7": {
+    			title: "Purpose",
+    			description: "The aim of the DopeTrope NTF world is to share the newest NFT pieces. You can find the information about the price and the release date so you can prepare to deep-dive into this NTF world and invest in unique art pieces.",
+    			iconClass: "icon64 icon64-1",
+    			badgeClass: "pennant",
+    			_id: "0a1b2c3d4-5e6f7a8-9b1c2d3-4e5f6a7"
+    		},
+    		"1e2b3a4d5-6f7e8c9-0a1b2c3-4e5f6d7": {
+    			title: "Find your piece(s)",
+    			description: "We have a large collection of art NTF pieces from which you can choose the one that is most aligned to your personality.",
+    			iconClass: "icon64 icon64-2",
+    			badgeClass: "pennant pennant-alt",
+    			_id: "1e2b3a4d5-6f7e8c9-0a1b2c3-4e5f6d7"
+    		},
+    		"4d5e6f7a8-1b2c3d4-5e6f7a8-9b0c1d2": {
+    			title: "Share your art",
+    			description: "You have the opportunity to share your art - you need only to log into your account and create a new post which will be added to our catalog.",
+    			iconClass: "icon64 icon64-3",
+    			badgeClass: "pennant pennant-alt2",
+    			_id: "4d5e6f7a8-1b2c3d4-5e6f7a8-9b0c1d2"
+    		}
+    	},
+    	blogPost: {
+    		"7e8d9a0b1-2c3d4e5-6f7a8b9-1c2d3e4": {
+    			_id: "7e8d9a0b1-2c3d4e5-6f7a8b9-1c2d3e4",
+    			title: "Navigating the NFT Revolution: A Beginner's Guide to Non-Fungible Tokens",
+    			text: "In recent years, a technological wave has transformed the way we perceive and trade digital assets, and at the forefront of this revolution are Non-Fungible Tokens (NFTs). NFTs have gained unprecedented popularity, captivating the art, entertainment, and gaming industries. Let's delve into the world of NFTs, exploring what they are, how they work, and why they've become a game-changer in the digital landscape. Understanding NFTs: NFTs are unique digital assets that represent ownership or proof of authenticity of a specific item or piece of content, typically stored on a blockchain. Unlike cryptocurrencies such as Bitcoin or Ethereum, which are fungible and can be exchanged on a one-to-one basis, NFTs are indivisible and cannot be replicated.In conclusion, NFTs represent a paradigm shift in the digital economy, offering creators new ways to monetize their work and buyers unique opportunities to own and trade digital assets. As the technology continues to mature, the impact of NFTs on various industries is likely to deepen, making them a fascinating and transformative force in the world of digital ownership."
+    		},
+    		"6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0": {
+    			_id: "6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0",
+    			title: "The Rise of NFTs in the Art World: Revolutionizing Ownership and Creativity",
+    			text: "The art world is experiencing a revolution, and at the heartof it is the rise of Non-Fungible Tokens (NFTs). These digital tokens have disrupted traditional notions of art ownership and proven to be a game-changer for both artists and collectors. Let's explore how NFTs are reshaping the art market, offering new possibilities and challenges.NFTs have opened up unprecedented opportunities for digital artists who, in the past, struggled to monetize their work. By tokenizing digital art, creators can sell their pieces directly to a global audience, breaking down geographical barriers and reaching collectors who appreciate the unique nature of digital creations.While the NFT art market has seen tremendous success, it has not been without its share of challenges and criticisms. Environmental concerns related to the energy consumption of blockchain networks, issues of copyright infringement, and the potential for market manipulation are some of the hurdles that the NFT art space is actively addressing. In conclusion, NFTs have ushered in a new era for the art world, transforming the way we create, buy, and sell digital art. As the technology continues to evolve, the impact of NFTs on the art market is likely to grow, offering exciting possibilities for artists, collectors, and art enthusiasts alike."
+    		}
+    	},
     	nfts: {
     		"9a8b7e6d5-4c3a2f1-8d7e9b1-a4b5c6": {
     			title: "The Wild Woman",
@@ -1346,7 +1381,8 @@
     			floor_price: 2.5,
     			img: "images/pic03.jpg",
     			author_name: "Emily Artiste",
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a"
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			_id: "9a8b7e6d5-4c3a2f1-8d7e9b1-a4b5c6"
     		},
     		"8e7b6a2-3f8c-4d9b-a1d2-9e8a7b6d5c4": {
     			title: "Art is power",
@@ -1354,7 +1390,8 @@
     			floor_price: 5,
     			img: "images/pic04.jpg",
     			author_name: "Sculptor Smith",
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8"
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			_id: "8e7b6a2-3f8c-4d9b-a1d2-9e8a7b6d5c4"
     		},
     		"e5b4d3a7-6c8f-4d9a-b3e2-1f8e9a4b5c6": {
     			title: "'WE' is better than 'ME'",
@@ -1362,7 +1399,8 @@
     			floor_price: 1.8,
     			img: "images/pic07.jpg",
     			author_name: "CodeCanvas",
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a"
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			_id: "e5b4d3a7-6c8f-4d9a-b3e2-1f8e9a4b5c6"
     		},
     		"2d4b6c9-8a0e-4d3c-9b1a-7e8f6a5b3c2f": {
     			title: "Cartoon Critters Collection",
@@ -1370,7 +1408,8 @@
     			floor_price: 3.2,
     			img: "images/pic02.jpg",
     			author_name: "CartoonCraftsman",
-    			_ownerId: "4809"
+    			_ownerId: "4809",
+    			_id: "2d4b6c9-8a0e-4d3c-9b1a-7e8f6a5b3c2f"
     		},
     		"f7e2a1-1b2d-4f85-89a7-6d3a2c9e0f4b": {
     			title: "Cute Boy Gasho",
@@ -1378,7 +1417,8 @@
     			floor_price: 4.5,
     			img: "images/pic05.jpg",
     			author_name: "GlassCraftsman",
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8"
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			_id: "f7e2a1-1b2d-4f85-89a7-6d3a2c9e0f4b"
     		},
     		"9bae6d8-793e-46c4-a9db-deb9e34849": {
     			title: "Summer Bliss",
@@ -1386,7 +1426,8 @@
     			floor_price: 6,
     			img: "images/pic06.jpg",
     			author_name: "CreativeMind",
-    			_ownerId: "5921"
+    			_ownerId: "5921",
+    			_id: "9bae6d8-793e-46c4-a9db-deb9e34849"
     		}
     	},
     	recipes: {
