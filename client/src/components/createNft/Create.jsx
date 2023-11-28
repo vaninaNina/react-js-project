@@ -36,8 +36,8 @@ const Create = () => {
           required
         ></textarea>
 
-        <label htmlFor="price">Price:</label>
-        <input type="number" id="price" name="price" step="0.1" required />
+        <label htmlFor="price">Price Floor:</label>
+        <input type="number" id="price" name="priceFloor" step="0.1" required />
 
         <label htmlFor="releaseDate">Release Date:</label>
         <input type="date" id="releaseDate" name="releaseDate" required />
