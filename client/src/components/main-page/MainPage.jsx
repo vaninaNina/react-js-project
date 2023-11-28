@@ -142,7 +142,10 @@ const MainPage = () => {
                     world of digital ownership.
                   </p>
                   <footer className="actions">
-                    <a href="#" className="button button-icon button-icon-1">
+                    <a
+                      href="/blog"
+                      className="button button-icon button-icon-1"
+                    >
                       Continue Reading
                     </a>
                   </footer>
@@ -186,7 +189,10 @@ const MainPage = () => {
                     collectors, and art enthusiasts alike.
                   </p>
                   <footer className="actions">
-                    <a href="#" className="button button-icon button-icon-1">
+                    <a
+                      href="/blog"
+                      className="button button-icon button-icon-1"
+                    >
                       Continue Reading
                     </a>
                   </footer>
