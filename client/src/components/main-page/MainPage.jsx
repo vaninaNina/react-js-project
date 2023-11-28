@@ -103,6 +103,11 @@ const MainPage = () => {
                 ))
               }
             </div>
+            <div className="actions">
+              <a href="/nfts" className="button button-big">
+                Get Started
+              </a>
+            </div>
           </div>
         </section>
         <section>
@@ -120,13 +125,6 @@ const MainPage = () => {
                   _id={item._id}
                 />
               ))}
-            </div>
-          </div>
-          <div className="getstarted">
-            <div className="actions">
-              <a href="/nfts" className="button button-big">
-                Get Started
-              </a>
             </div>
           </div>
         </section>

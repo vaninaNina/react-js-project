@@ -1,8 +1,3 @@
-.getstarted {
-  display: flex;
-  justify-content: center;
-}
-
 .row {
   display: flex;
   gap: 4em;
