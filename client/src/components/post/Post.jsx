@@ -41,7 +41,7 @@ const Post = () => {
       {/* {userId === postId._ownerId ? ( */}
       <div>
         <button className="button">
-          <Link to={`/post/:postId/edit`} className="button">
+          <Link to={`/post/${postId}/edit`} className="button">
             Edit
           </Link>
         </button>

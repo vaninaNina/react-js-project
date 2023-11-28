@@ -39,8 +39,8 @@ const Create = () => {
         <label htmlFor="price">Price Floor:</label>
         <input type="number" id="price" name="priceFloor" step="0.1" required />
 
-        <label htmlFor="releaseDate">Release Date:</label>
-        <input type="date" id="releaseDate" name="releaseDate" required />
+        {/* <label htmlFor="releaseDate">Release Date:</label>
+        <input type="date" id="releaseDate" name="releaseDate" required /> */}
 
         <label htmlFor="author">Author:</label>
         <input type="text" id="author" name="author" required />

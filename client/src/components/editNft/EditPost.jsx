@@ -10,9 +10,8 @@ const EditPost = () => {
   const [nft, setNft] = useState({
     title: "",
     description: "",
-    priceFloor: "",
-    releaseDate: "",
-    author: "",
+    ["floor_price"]: "",
+    ["author_name"]: "",
     img: "",
   });
 
@@ -28,11 +27,11 @@ const EditPost = () => {
   const editNftSubmitHandler = async (e) => {
     e.preventDefault();
 
-    // { title, description, price, releaseDate, author, imageUrl } - nftData
-    const nftData = Object.fromEntries(new FormData(e.currentTarget));
+    // { title, description, price, author, imageUrl } - nftData
+    const values = Object.fromEntries(new FormData(e.currentTarget));
 
     try {
-      await nftService.edit(postId, nftData);
+      await nftService.edit(postId, values);
       navigate("/nfts");
     } catch (err) {
       console.log(err);
@@ -76,17 +75,7 @@ const EditPost = () => {
           id="price"
           name="priceFloor"
           step="0.1"
-          value={nft.priceFloor}
-          onChange={onChange}
-          required
-        />
-
-        <label htmlFor="releaseDate">Release Date:</label>
-        <input
-          type="date"
-          id="releaseDate"
-          name="releaseDate"
-          value={nft.releaseDate}
+          value={nft["floor_price"]}
           onChange={onChange}
           required
         />
@@ -96,7 +85,7 @@ const EditPost = () => {
           type="text"
           id="author"
           name="author"
-          value={nft.author}
+          value={nft["author_name"]}
           onChange={onChange}
           required
         />
