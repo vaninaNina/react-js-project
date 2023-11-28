@@ -39,14 +39,14 @@ const Post = () => {
       <p className="floor-price">Floor Price: {data["floor_price"]} ETH </p>
 
       {/* {userId === postId._ownerId ? ( */}
-      <div>
+      <div className="buttons" style={{ gap: "0.4em" }}>
         <Link to={`/post/${postId}/edit`} className="button">
           Edit
         </Link>
 
-        <button className="actions" onClick={deleteButtonClickHandler}>
+        <Link to={"#"} className="button" onClick={deleteButtonClickHandler}>
           Delete
-        </button>
+        </Link>
       </div>
       {/* ) : null} */}
     </div>

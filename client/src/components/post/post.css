@@ -40,32 +40,3 @@ img {
 .buttons {
   display: flex;
 }
-
-.button,
-.actions {
-  display: inline-block;
-  font-size: 14px;
-  padding: 6px 12px;
-  margin-right: 10px;
-  text-decoration: none;
-  color: #ffffff;
-  background-color: #dc3545;
-  border: 1px solid #dc3545;
-  border-radius: 4px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: 700;
-  width: 100px;
-  height: 40px;
-}
-
-.actions {
-  background-color: #dc3545;
-  border-color: #dc3545;
-}
-
-.button:hover,
-.actions:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
