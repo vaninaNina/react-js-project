@@ -40,13 +40,11 @@ const Post = () => {
 
       {/* {userId === postId._ownerId ? ( */}
       <div>
-        <button className="button">
-          <Link to={`/post/${postId}/edit`} className="button">
-            Edit
-          </Link>
-        </button>
+        <Link to={`/post/${postId}/edit`} className="button">
+          Edit
+        </Link>
 
-        <button className="button" onClick={deleteButtonClickHandler}>
+        <button className="actions" onClick={deleteButtonClickHandler}>
           Delete
         </button>
       </div>
