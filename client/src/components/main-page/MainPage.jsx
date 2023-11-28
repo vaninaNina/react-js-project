@@ -2,10 +2,14 @@ import DescriptionCard from "./subcomponents/description_card.jsx";
 import NftCard from "./subcomponents/ntf_card.jsx";
 import { useState, useEffect } from "react";
 import * as nftService from "../../services/nftService.js";
+import * as dataService from "../../services/dataService.js";
 import "../main-page/mainp.css";
+import BlogPost from "./subcomponents/blog_post.jsx";
 
 const MainPage = () => {
   const [data, setData] = useState([]);
+  const [blogPost, setBlogPost] = useState([]);
+  const [fronText, setFrontText] = useState([]);
 
   const getData = async () => {
     try {
@@ -21,7 +25,30 @@ const MainPage = () => {
 
   // let firstThree = Array.from({ length: 3 }, (_, i) => data[i]);
   const firstElemensts = data.filter((item, index) => index < 3);
-  console.log("firstElemensts", firstElemensts);
+
+  const getBlogPosts = async () => {
+    try {
+      const response = await dataService.getBlogPost();
+      setBlogPost(response);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  useEffect(() => {
+    getBlogPosts();
+  }, []);
+
+  const getFrontText = async () => {
+    try {
+      const response = await dataService.getFrontText();
+      setFrontText(response);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  useEffect(() => {
+    getFrontText();
+  }, []);
 
   return (
     <div className="row">
@@ -42,7 +69,8 @@ const MainPage = () => {
         <section id="intro">
           <div className="5grid">
             <div className="row">
-              {[
+              {
+                /* {[
                 {
                   title: "Purpose",
                   description:
@@ -63,16 +91,17 @@ const MainPage = () => {
                     "You have the opportunity to share your art - you need only to log into your account and create a new post which will be added to our catalog.",
                   iconClass: "icon64 icon64-3",
                   badgeClass: "pennant pennant-alt2",
-                },
-              ].map((item) => (
-                <DescriptionCard
-                  key={item.title}
-                  title={item.title}
-                  badgeClass={item.badgeClass}
-                  iconClass={item.iconClass}
-                  description={item.description}
-                />
-              ))}
+                },] */
+                fronText.map((item) => (
+                  <DescriptionCard
+                    key={item._id}
+                    title={item.title}
+                    badgeClass={item.badgeClass}
+                    iconClass={item.iconClass}
+                    description={item.description}
+                  />
+                ))
+              }
             </div>
           </div>
         </section>
@@ -107,7 +136,15 @@ const MainPage = () => {
           </header>
           <div className="5grid">
             <div className="row">
-              <div className="6u">
+              {blogPost.map((post) => (
+                <BlogPost
+                  key={post._id}
+                  img={post.img}
+                  title={post.title}
+                  text={`${post.text.slice(34, 400)}...`}
+                />
+              ))}
+              {/* <div className="6u">
                 <section className="box">
                   <a href="#" className="image image-full">
                     <img src="images/pic08.jpg" alt="" />
@@ -118,7 +155,7 @@ const MainPage = () => {
                       Non-Fungible Tokens
                     </h3>
                     {/* <span className="byline">Posted 45 minutes ago</span> */}
-                  </header>
+              {/* </header>
                   <p>
                     In recent years, a technological wave has transformed the
                     way we perceive and trade digital assets, and at the
@@ -141,8 +178,8 @@ const MainPage = () => {
                     making them a fascinating and transformative force in the
                     world of digital ownership.
                   </p>
-                  <footer className="actions">
-                    <a
+                  <footer className="actions"> */}
+              {/* <a
                       href="/blog"
                       className="button button-icon button-icon-1"
                     >
@@ -150,8 +187,8 @@ const MainPage = () => {
                     </a>
                   </footer>
                 </section>
-              </div>
-              <div className="6u">
+              </div> */}
+              {/* <div className="6u">
                 <section className="box">
                   <a href="#" className="image image-full">
                     <img src="images/pic09.jpg" alt="" />
@@ -161,9 +198,9 @@ const MainPage = () => {
                       The Rise of NFTs in the Art World: Revolutionizing
                       Ownership and Creativity
                     </h3>
-                    {/* <span className="byline">Posted 45 minutes ago</span> */}
-                  </header>
-                  <p>
+                    <span className="byline">Posted 45 minutes ago</span>
+                  </header> */}
+              {/* <p>
                     The art world is experiencing a revolution, and at the heart
                     of it is the rise of Non-Fungible Tokens (NFTs). These
                     digital tokens have disrupted traditional notions of art
@@ -196,8 +233,8 @@ const MainPage = () => {
                       Continue Reading
                     </a>
                   </footer>
-                </section>
-              </div>
+                </section> */}
+              {/* </div> */}
             </div>
           </div>
         </section>
