@@ -11,6 +11,7 @@ import MainPage from "./components/main-page/MainPage.jsx";
 import Register from "./components/register/Register.jsx";
 import Create from "./components/createNft/Create.jsx";
 import Post from "./components/post/Post.jsx";
+import EditPost from "./components/editNft/EditPost.jsx";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/create" element={<Create />} />
             <Route path="/post/:postId" element={<Post />} />
+            <Route path="/post/:postId/edit" element={<EditPost />} />
           </Routes>
         </div>
       </div>

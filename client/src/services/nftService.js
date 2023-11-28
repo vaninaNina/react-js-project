@@ -19,3 +19,9 @@ export const create = async (nftData) => {
 
   return result;
 };
+
+export const edit = async (nftId, nftData) => {
+  const result = await request.put(`${baseUrl}/${nftId}`, nftData);
+
+  return result;
+};
