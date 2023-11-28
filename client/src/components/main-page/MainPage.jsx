@@ -19,8 +19,9 @@ const MainPage = () => {
     getData();
   }, []);
 
-  const firstElemensts = data.slice(0, 3);
-  console.log("firstElemensts", data);
+  // let firstThree = Array.from({ length: 3 }, (_, i) => data[i]);
+  const firstElemensts = data.filter((item, index) => index < 3);
+  console.log("firstElemensts", firstElemensts);
 
   return (
     <div className="row">
