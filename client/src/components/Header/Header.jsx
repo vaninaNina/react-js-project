@@ -44,8 +44,13 @@ const Header = () => {
                   <li>
                     <Link to="/about">About</Link>
                   </li>
+                </ul>
+                <ul>
                   {isAuthenticated ? (
                     <div id="user">
+                      <li>
+                        <Link to="/profile">My Profile</Link>
+                      </li>
                       <li>
                         <Link to="/create">Create</Link>
                       </li>

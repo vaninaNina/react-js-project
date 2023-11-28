@@ -14,6 +14,7 @@ import Post from "./components/post/Post.jsx";
 import EditPost from "./components/editNft/EditPost.jsx";
 import ErrorBoundary from "./ErrorBoundary.jsx";
 import AuthGuard from "./components/guards/AuthGuard.jsx";
+import MyProfile from "./components/myProfile/MyProfile.jsx";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Route path="/post/:postId" element={<Post />} />
 
               <Route element={<AuthGuard />}>
+                <Route path="/profile" element={<MyProfile />} />
                 <Route path="/create" element={<Create />} />
                 <Route path="/post/:postId/edit" element={<EditPost />} />
               </Route>
