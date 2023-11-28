@@ -12,28 +12,35 @@ import Register from "./components/register/Register.jsx";
 import Create from "./components/createNft/Create.jsx";
 import Post from "./components/post/Post.jsx";
 import EditPost from "./components/editNft/EditPost.jsx";
+import ErrorBoundary from "./ErrorBoundary.jsx";
+import AuthGuard from "./components/guards/AuthGuard.jsx";
 
 function App() {
   return (
-    <AuthProvider>
-      <Header />
-      <div id="main-wrapper">
-        <div className="5grid-layout">
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/nfts" element={<Catalog />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/create" element={<Create />} />
-            <Route path="/post/:postId" element={<Post />} />
-            <Route path="/post/:postId/edit" element={<EditPost />} />
-          </Routes>
+    <ErrorBoundary>
+      <AuthProvider>
+        <Header />
+        <div id="main-wrapper">
+          <div className="5grid-layout">
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/nfts" element={<Catalog />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/post/:postId" element={<Post />} />
+
+              <Route element={<AuthGuard />}>
+                <Route path="/create" element={<Create />} />
+                <Route path="/post/:postId/edit" element={<EditPost />} />
+              </Route>
+            </Routes>
+          </div>
         </div>
-      </div>
-      <Footer />
-    </AuthProvider>
+        <Footer />
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
 
