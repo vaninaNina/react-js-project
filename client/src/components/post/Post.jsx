@@ -39,21 +39,21 @@ const Post = () => {
       <p className="description">{data.description}</p>
       <p className="floor-price">Floor Price: {data["floor_price"]} ETH </p>
 
-      {/* {userId === postId._ownerId ? ( */}
-      <div className="buttons" style={{ gap: "0.4em" }}>
-        <Link to={`/post/${data._id}/edit`} className="button">
-          Edit
-        </Link>
+      {userId === data._ownerId ? (
+        <div className="buttons" style={{ gap: "0.4em" }}>
+          <Link to={`/post/${data._id}/edit`} className="button">
+            Edit
+          </Link>
 
-        <Link
-          to={"/nfts"}
-          className="button"
-          onClick={deleteButtonClickHandler}
-        >
-          Delete
-        </Link>
-      </div>
-      {/* ) : null} */}
+          <Link
+            to={"/nfts"}
+            className="button"
+            onClick={deleteButtonClickHandler}
+          >
+            Delete
+          </Link>
+        </div>
+      ) : null}
     </div>
   );
 };
