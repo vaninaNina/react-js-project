@@ -49,10 +49,10 @@ const Header = () => {
                   {isAuthenticated ? (
                     <div id="user">
                       <li>
-                        <Link to="/profile">My Profile</Link>
+                        <Link to="/create">Create</Link>
                       </li>
                       <li>
-                        <Link to="/create">Create</Link>
+                        <Link to="/profile">My Profile</Link>
                       </li>
 
                       <input
