@@ -15,13 +15,14 @@ const Post = () => {
   useEffect(() => {
     getPost();
   }, []);
+
   const deleteButtonClickHandler = async () => {
     const hasConfirmed = confirm(
-      `Are you sure you want to delete ${postId.title}`,
+      `Are you sure you want to delete ${data.title}`,
     );
 
     if (hasConfirmed) {
-      await nftService.remove(nftId);
+      await nftService.del(postId);
 
       navigate("/nfts");
     }
@@ -40,11 +41,15 @@ const Post = () => {
 
       {/* {userId === postId._ownerId ? ( */}
       <div className="buttons" style={{ gap: "0.4em" }}>
-        <Link to={`/post/${postId}/edit`} className="button">
+        <Link to={`/post/${data._id}/edit`} className="button">
           Edit
         </Link>
 
-        <Link to={"#"} className="button" onClick={deleteButtonClickHandler}>
+        <Link
+          to={"/nfts"}
+          className="button"
+          onClick={deleteButtonClickHandler}
+        >
           Delete
         </Link>
       </div>

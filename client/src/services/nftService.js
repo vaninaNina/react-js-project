@@ -8,8 +8,8 @@ export const getAll = async () => {
   return result;
 };
 
-export const getOne = async (nftId) => {
-  const result = await request.get(`${baseUrl}/${nftId}`);
+export const getOne = async (postId) => {
+  const result = await request.get(`${baseUrl}/${postId}`);
 
   return result;
 };
@@ -20,8 +20,10 @@ export const create = async (nftData) => {
   return result;
 };
 
-export const edit = async (nftId, nftData) => {
-  const result = await request.put(`${baseUrl}/${nftId}`, nftData);
+export const edit = async (postId, nftData) => {
+  const result = await request.put(`${baseUrl}/${postId}`, nftData);
 
   return result;
 };
+
+export const del = async (postId) => request.del(`${baseUrl}/${postId}`);
