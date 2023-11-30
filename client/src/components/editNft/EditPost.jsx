@@ -1,38 +1,36 @@
-import "../createNft/create.css";
+import "../createBlogPost/create.css";
 
 import { useNavigate, useParams } from "react-router-dom";
-import * as nftService from "../../services/nftService.js";
+import * as dataService from "../../services/dataService.js";
 import { useEffect, useState } from "react";
 
-const EditPost = () => {
+const EditBlogPost = () => {
   const navigate = useNavigate();
-  const { postId } = useParams();
-  const [nft, setNft] = useState({
+  const { blogPostId } = useParams();
+  const [blogPost, setBlogPost] = useState({
     title: "",
-    description: "",
-    ["floor_price"]: "",
-    ["author_name"]: "",
+    text: "",
+    author: "",
     img: "",
   });
 
   useEffect(() => {
-    nftService.getOne(postId).then(
+    dataService.getBlogPost(blogPostId).then(
       (result) => {
-        setNft(result);
+        setBlogPost(result);
       },
-      [postId],
+      [blogPostId],
     );
   });
 
-  const editNftSubmitHandler = async (e) => {
+  const editBlogPostSubmitHandler = async (e) => {
     e.preventDefault();
 
-    // { title, description, price, author, imageUrl } - nftData
     const values = Object.fromEntries(new FormData(e.currentTarget));
 
     try {
-      await nftService.edit(postId, values);
-      navigate("/nfts");
+      await dataService.editBlogPost(blogPostId, values);
+      navigate("/blogPost");
     } catch (err) {
       console.log(err);
       alert(err);
@@ -40,42 +38,31 @@ const EditPost = () => {
   };
 
   const onChange = (e) => {
-    setNft((state) => ({
+    setBlogPost((state) => ({
       ...state,
       [e.target.name]: e.target.value,
     }));
   };
   return (
     <div className="container">
-      <h2>Edit NFT post</h2>
-      <form onSubmit={editNftSubmitHandler}>
+      <h2>Edit Blog Post</h2>
+      <form onSubmit={editBlogPostSubmitHandler}>
         <label htmlFor="title">Title:</label>
         <input
           type="text"
           id="title"
           name="title"
-          value={nft.title}
+          value={values.title}
           onChange={onChange}
           required
         />
 
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          rows="4"
-          value={nft.description}
-          onChange={onChange}
-          required
-        ></textarea>
-
-        <label htmlFor="price">Price Floor:</label>
+        <label htmlFor="text">Text:</label>
         <input
-          type="number"
-          id="price"
-          name="priceFloor"
-          step="0.1"
-          value={nft["floor_price"]}
+          type="text"
+          id="text"
+          name="text"
+          value={values.text}
           onChange={onChange}
           required
         />
@@ -105,4 +92,4 @@ const EditPost = () => {
   );
 };
 
-export default EditPost;
+export default EditBlogPost;
