@@ -11,87 +11,30 @@ const About = () => {
                     <img src="images/pic01.jpg" alt="" />
                   </a>
                   <header>
-                    <h2>The Droptrope NTF World</h2>
-                    <span className="byline">
-                      Lorem ipsum dolor sit amet feugiat
-                    </span>
+                    <h2>Welcome to The Droptrope NTF World</h2>
+                    <span className="byline">About us:</span>
                   </header>
                   <p>
-                    Vestibulum scelerisque ultricies libero id hendrerit.
-                    Vivamus malesuada quam faucibus ante dignissim auctor
-                    hendrerit libero placerat. Nulla facilisi. Proin aliquam
-                    felis non arcu molestie at accumsan turpis commodo. Proin
-                    elementum, nibh non egestas sodales, augue quam aliquet est,
-                    id egestas diam justo adipiscing ante. Pellentesque tempus
-                    nulla non urna eleifend ut ultrices nisi faucibus.
-                    Vestibulum scelerisque ultricies libero id hendrerit.
-                    Vivamus malesuada quam faucibus ante dignissim auctor
-                    hendrerit libero placerat. Nulla facilisi. Proin aliquam
-                    felis non arcu molestie at accumsan turpis commodo. Proin
-                    elementum, nibh non egestas sodales, augue quam aliquet est,
-                    id egestas diam justo adipiscing ante.
+                    The Droptrope NFT World is your premier destination for
+                    discovering a diverse and exquisite collection of NFT art
+                    created by our talented artists around the world. Our
+                    platform is dedicated to showcasing the beauty and
+                    creativity of the digital NFT art. We believe in the power
+                    of art to inspire and evoke emotions and of course provoke
+                    you to invest. Our curated collection aims to connect
+                    artists with art enthusiasts, collectors, investors and
+                    those seeking creative inspiration.Explore our carefully
+                    selected pieces and immerse yourself in the world of
+                    investment in NFT digital art pieces. Whether you're a
+                    seasoned art lover or just beginning your art journey,
+                    you'll find something captivating in our collection. Stay
+                    tuned to our blog for in-depth articles, artist spotlights,
+                    and behind-the-scenes glimpses into the vibrant world of
+                    art. We are passionate about fostering a community that
+                    appreciates the transformative power of art. Thank you for
+                    joining us on this artistic journey.
                   </p>
-                  <p>
-                    Praesent a dolor leo. Duis in felis in tortor lobortis
-                    volutpat et pretium tellus. Vestibulum ac ante nisl, a
-                    elementum odio. Duis semper risus et lectus commodo
-                    fringilla. Maecenas sagittis convallis justo vel mattis.
-                    placerat, nunc diam iaculis massa, et aliquet nibh leo non
-                    nisl vitae porta lobortis, enim neque fringilla nunc, eget
-                    faucibus lacus sem quis nunc suspendisse nec lectus sit amet
-                    augue rutrum vulputate ut ut mi. Aenean elementum, mi sit
-                    amet porttitor lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Lorem ipsum dolor.
-                  </p>
-                  <section>
-                    <header>
-                      <h3>Something else</h3>
-                    </header>
-                    <p>
-                      Elementum odio duis semper risus et lectus commodo
-                      fringilla. Maecenas sagittis convallis justo vel mattis.
-                      placerat, nunc diam iaculis massa, et aliquet nibh leo non
-                      nisl vitae porta lobortis, enim neque fringilla nunc, eget
-                      faucibus lacus sem quis nunc suspendisse nec lectus sit
-                      amet augue rutrum vulputate ut ut mi. Aenean elementum, mi
-                      sit amet porttitor lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit. Lorem ipsum dolor sit amet nullam
-                      consequat feugiat dolore tempus. Elementum odio duis
-                      semper risus et lectus commodo fringilla. Maecenas
-                      sagittis convallis justo vel mattis. placerat, nunc diam
-                      iaculis massa, et aliquet nibh leo non nisl vitae porta
-                      lobortis, enim neque fringilla nunc, eget faucibus lacus
-                      sem quis nunc suspendisse nec lectus sit amet augue rutrum
-                      vulputate ut ut mi. Aenean elementum, mi sit amet
-                      porttitor lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit. Lorem ipsum dolor.
-                    </p>
-                    <p>
-                      Nunc diam iaculis massa, et aliquet nibh leo non nisl
-                      vitae porta lobortis, enim neque fringilla nunc, eget
-                      faucibus lacus sem quis nunc suspendisse nec lectus sit
-                      amet augue rutrum vulputate ut ut mi. Aenean elementum, mi
-                      sit amet porttitor lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit. Lorem ipsum dolor sit amet nullam
-                      consequat feugiat dolore tempus.
-                    </p>
-                  </section>
-                  <section>
-                    <header>
-                      <h3>So in conclusion ...</h3>
-                    </header>
-                    <p>
-                      Nunc diam iaculis massa, et aliquet nibh leo non nisl
-                      vitae porta lobortis, enim neque fringilla nunc, eget
-                      faucibus lacus sem quis nunc suspendisse nec lectus sit
-                      amet augue rutrum vulputate ut ut mi. Aenean elementum, mi
-                      sit amet porttitor lorem ipsum dolor sit amet, consectetur
-                      adipiscing elit. Lorem ipsum dolor sit amet nullam
-                      consequat feugiat dolore tempus. Elementum odio duis
-                      semper risus et lectus commodo fringilla. Maecenas
-                      sagittis convallis justo vel mattis.
-                    </p>
-                  </section>
+                  <h4> -The Dopetrope Team</h4>
                 </article>
               </div>
             </div>
