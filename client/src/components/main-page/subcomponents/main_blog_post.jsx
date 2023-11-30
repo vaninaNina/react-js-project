@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const BlogPost = ({ img, title, text, _id }) => {
+const BlogPost = ({ img, title, text, blogPostId }) => {
   return (
     <div className="6u">
       <section className="box">
@@ -13,7 +13,7 @@ const BlogPost = ({ img, title, text, _id }) => {
         <p>{text}</p>
         <footer className="actions">
           <Link
-            to={`/blogPost/${_id}`}
+            to={`/blogPost/${blogPostId}`}
             className="button button-icon button-icon-1"
           >
             Continue Reading

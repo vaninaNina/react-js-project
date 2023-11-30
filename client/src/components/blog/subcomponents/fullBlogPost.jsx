@@ -60,7 +60,7 @@ const FullBlogPost = () => {
       <img src={`../${data.img}`} alt="Blog Post Image" />
       <h2>{data.title}</h2>
       <p>{data.text}</p>
-      <p className="author">Author Name: {data["author_name"]}</p>
+      <p className="author">Author Name: {data.author}</p>
 
       {userId === data._ownerId ? (
         <div className="buttons" style={{ gap: "0.4em" }}>

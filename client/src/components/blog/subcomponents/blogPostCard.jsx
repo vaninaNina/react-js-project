@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const BlogPostCard = ({ img, title, text, _id }) => {
+const BlogPostCard = ({ img, title, text, _id, author }) => {
   return (
     <article className="box is-post">
       <a href="#" className="image image-full">
@@ -8,7 +8,7 @@ const BlogPostCard = ({ img, title, text, _id }) => {
       </a>
       <header>
         <h2>{title}</h2>
-        <p>Author: Aki Baki</p>
+        <p>Author: {author}</p>
       </header>
       <p>{text}</p>
 

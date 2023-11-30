@@ -38,6 +38,7 @@ const MainPage = () => {
     getBlogPosts();
   }, []);
 
+  const firstTwoBlogPosts = blogPost.filter((item, index) => index < 2);
   const getFrontText = async () => {
     try {
       const response = await dataService.getFrontText();
@@ -134,8 +135,9 @@ const MainPage = () => {
           </header>
           <div className="5grid">
             <div className="row">
-              {blogPost.map((post) => (
+              {firstTwoBlogPosts.map((post) => (
                 <BlogPost
+                  blogPostId={post._id}
                   key={post._id}
                   img={post.img}
                   title={post.title}
