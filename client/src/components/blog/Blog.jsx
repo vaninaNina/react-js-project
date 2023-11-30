@@ -29,6 +29,7 @@ const Blog = () => {
                     title={item.title}
                     text={item.text}
                     img={item.img}
+                    author={item.author}
                   />
                 ))}
                 {/* <span>
