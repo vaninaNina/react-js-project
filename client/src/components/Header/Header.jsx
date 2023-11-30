@@ -39,7 +39,7 @@ const Header = () => {
                     <Link to="/nfts">Catalog</Link>
                   </li>
                   <li>
-                    <Link to="/blog">Blog</Link>
+                    <Link to="/blogPost">Blog</Link>
                   </li>
                   <li>
                     <Link to="/about">About</Link>
