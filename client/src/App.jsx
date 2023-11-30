@@ -4,7 +4,6 @@ import { AuthProvider } from "./context/authContext.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import Header from "./components/header/Header.jsx";
 import Catalog from "./components/catalog/Catalog.jsx";
-import Blog from "./components/Blog/Blog.jsx";
 import About from "./components/about/About.jsx";
 import Login from "./components/login/Login.jsx";
 import MainPage from "./components/main-page/MainPage.jsx";
@@ -15,6 +14,8 @@ import EditPost from "./components/editNft/EditPost.jsx";
 import ErrorBoundary from "./ErrorBoundary.jsx";
 import AuthGuard from "./components/guards/AuthGuard.jsx";
 import MyProfile from "./components/myProfile/MyProfile.jsx";
+import FullBlogPost from "./components/blog/subcomponents/fullBlogPost.jsx";
+import Blog from "./components/blog/Blog.jsx";
 
 function App() {
   return (
@@ -26,11 +27,12 @@ function App() {
             <Routes>
               <Route path="/" element={<MainPage />} />
               <Route path="/nfts" element={<Catalog />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blogPost" element={<Blog />} />
               <Route path="/about" element={<About />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/post/:postId" element={<Post />} />
+              <Route path="/blogPost/:blogPostId" element={<FullBlogPost />} />
 
               <Route element={<AuthGuard />}>
                 <Route path="/profile" element={<MyProfile />} />
