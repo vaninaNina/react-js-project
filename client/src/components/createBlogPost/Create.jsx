@@ -1,20 +1,20 @@
-import "../createNft/create.css";
+import "../createBlogPost/create.css";
 
 import { useNavigate } from "react-router-dom";
-import * as nftService from "../../services/nftService.js";
+import * as dataService from "../../services/dataService.js";
 
-const Create = () => {
+const CreateBlogPost = () => {
   const navigate = useNavigate();
 
-  const createNftSubmitHandler = async (e) => {
+  const createBlogPostSubmitHandler = async (e) => {
     e.preventDefault();
 
     // { title, description, price, releaseDate, author, imageUrl } - nftData
-    const nftData = Object.fromEntries(new FormData(e.currentTarget));
+    const data = Object.fromEntries(new FormData(e.currentTarget));
 
     try {
-      await nftService.create(nftData);
-      navigate("/nfts");
+      await dataService.createBlogPost(data);
+      navigate("/blogPost");
     } catch (err) {
       console.log(err);
       alert(err);
@@ -24,23 +24,12 @@ const Create = () => {
   return (
     <div className="container">
       <h2>Create Blog Post</h2>
-      <form onSubmit={createNftSubmitHandler}>
+      <form onSubmit={createBlogPostSubmitHandler}>
         <label htmlFor="title">Title:</label>
         <input type="text" id="title" name="title" required />
 
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          rows="4"
-          required
-        ></textarea>
-
-        <label htmlFor="price">Price Floor:</label>
-        <input type="number" id="price" name="priceFloor" step="0.1" required />
-
-        {/* <label htmlFor="releaseDate">Release Date:</label>
-        <input type="date" id="releaseDate" name="releaseDate" required /> */}
+        <label htmlFor="description">Text:</label>
+        <textarea id="text" name="text" required></textarea>
 
         <label htmlFor="author">Author:</label>
         <input type="text" id="author" name="author" required />
@@ -58,4 +47,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default CreateBlogPost;
