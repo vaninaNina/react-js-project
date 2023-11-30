@@ -23,7 +23,7 @@ const Create = () => {
 
   return (
     <div className="container">
-      <h2>Create NFT post</h2>
+      <h2>Create Blog Post</h2>
       <form onSubmit={createNftSubmitHandler}>
         <label htmlFor="title">Title:</label>
         <input type="text" id="title" name="title" required />
