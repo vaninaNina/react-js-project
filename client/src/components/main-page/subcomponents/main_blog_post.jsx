@@ -1,4 +1,6 @@
-const BlogPost = ({ img, title, text }) => {
+import { Link } from "react-router-dom";
+
+const BlogPost = ({ img, title, text, _id }) => {
   return (
     <div className="6u">
       <section className="box">
@@ -7,13 +9,15 @@ const BlogPost = ({ img, title, text }) => {
         </a>
         <header>
           <h3>{title}</h3>
-          {/* <span className="byline">Posted 45 minutes ago</span> */}
         </header>
-        <p>{text.slice(50)}</p>
+        <p>{text}</p>
         <footer className="actions">
-          <a href="/blog" className="button button-icon button-icon-1">
+          <Link
+            to={`/blogPost/${_id}`}
+            className="button button-icon button-icon-1"
+          >
             Continue Reading
-          </a>
+          </Link>
         </footer>
       </section>
     </div>
