@@ -19,5 +19,17 @@ export const getBlogPost = async (blogPostId) => {
   return result;
 };
 
+export const createBlogPost = async (data) => {
+  const result = await request.post(baseUrl, data);
+
+  return result;
+};
+
+export const editBlogPost = async (blogPostId, data) => {
+  const result = await request.put(`${baseUrl}/blogPost/${blogPostId}`, data);
+
+  return result;
+};
+
 export const del = async (blogPostId) =>
   request.del(`${baseUrl}/blogPost/${blogPostId}`);
