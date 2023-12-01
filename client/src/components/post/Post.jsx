@@ -21,7 +21,7 @@ const Post = () => {
   }, []);
 
   const handleLike = () => {
-    if (!hasLiked && isAuthenticated) {
+    if (!hasLiked && isAuthenticated && !dislikes) {
       setLikes(likes + 1);
       setHasLiked(true);
     }
@@ -31,8 +31,8 @@ const Post = () => {
     if (hasLiked && isAuthenticated) {
       setLikes(likes - 1);
       setHasLiked(false);
+      setDislikes(dislikes + 1);
     }
-    setDislikes(dislikes + 1);
   };
 
   return (
