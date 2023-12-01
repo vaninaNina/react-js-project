@@ -2,13 +2,15 @@ import { useEffect, useState, useContext } from "react";
 import { useParams, Link } from "react-router-dom";
 import * as nftService from "../../services/nftService.js";
 import AuthContext from "../../context/authContext.jsx";
-import useForm from "../../hooks/useForm";
 import "../post/post.css";
 
 const Post = () => {
   const { postId } = useParams();
   const [data, setData] = useState({});
   const { email, userId, isAuthenticated } = useContext(AuthContext);
+  const [likes, setLikes] = useState(0);
+  const [dislikes, setDislikes] = useState(0);
+  const [hasLiked, setHasLiked] = useState(false);
 
   const getPost = async () => {
     const response = await nftService.getOne(postId);
@@ -18,16 +20,19 @@ const Post = () => {
     getPost();
   }, []);
 
-  const deleteButtonClickHandler = async () => {
-    const hasConfirmed = confirm(
-      `Are you sure you want to delete ${data.title}`,
-    );
-
-    if (hasConfirmed) {
-      await nftService.del(postId);
-
-      navigate("/nfts");
+  const handleLike = () => {
+    if (!hasLiked && isAuthenticated) {
+      setLikes(likes + 1);
+      setHasLiked(true);
     }
+  };
+
+  const handleDislike = () => {
+    if (hasLiked && isAuthenticated) {
+      setLikes(likes - 1);
+      setHasLiked(false);
+    }
+    setDislikes(dislikes + 1);
   };
 
   return (
@@ -41,19 +46,14 @@ const Post = () => {
       <p className="description">{data.description}</p>
       <p className="floor-price">Floor Price: {data["floor_price"]} ETH </p>
 
-      {userId === data._ownerId ? (
+      {userId ? (
         <div className="buttons" style={{ gap: "0.4em" }}>
-          <Link to={`/post/${data._id}/edit`} className="button">
-            Edit
-          </Link>
-
-          <Link
-            to={"/nfts"}
-            className="button"
-            onClick={deleteButtonClickHandler}
-          >
-            Delete
-          </Link>
+          <button onClick={handleLike} disabled={hasLiked} className="button">
+            Likes {likes}
+          </button>
+          <button onClick={handleDislike} className="button">
+            Dislikes {dislikes}
+          </button>
         </div>
       ) : null}
     </div>
