@@ -20,7 +20,7 @@ export const getBlogPost = async (blogPostId) => {
 };
 
 export const createBlogPost = async (data) => {
-  const result = await request.post(baseUrl, data);
+  const result = await request.post(`${baseUrl}/blogPost`, data);
 
   return result;
 };

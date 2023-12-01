@@ -52,7 +52,7 @@ const EditBlogPost = () => {
           type="text"
           id="title"
           name="title"
-          value={values.title}
+          value={blogPost.title}
           onChange={onChange}
           required
         />
@@ -62,7 +62,7 @@ const EditBlogPost = () => {
           type="text"
           id="text"
           name="text"
-          value={values.text}
+          value={blogPost.text}
           onChange={onChange}
           required
         />
@@ -72,7 +72,7 @@ const EditBlogPost = () => {
           type="text"
           id="author"
           name="author"
-          value={nft["author_name"]}
+          value={blogPost.author}
           onChange={onChange}
           required
         />
@@ -82,7 +82,7 @@ const EditBlogPost = () => {
           type="text"
           id="imageUrl"
           name="imageUrl"
-          value={nft.img}
+          value={blogPost.img}
           onChange={onChange}
           placeholder="Place the URL image..."
         />

@@ -9,7 +9,7 @@ import Login from "./components/login/Login.jsx";
 import MainPage from "./components/main-page/MainPage.jsx";
 import Register from "./components/register/Register.jsx";
 import Post from "./components/post/Post.jsx";
-import EditPost from "./components/editNft/EditPost.jsx";
+import EditBlogPost from "./components/editBlogPost/EditBlogPost.jsx";
 import ErrorBoundary from "./ErrorBoundary.jsx";
 import AuthGuard from "./components/guards/AuthGuard.jsx";
 import MyProfile from "./components/myProfile/MyProfile.jsx";
@@ -37,7 +37,10 @@ function App() {
               <Route element={<AuthGuard />}>
                 <Route path="/profile" element={<MyProfile />} />
                 <Route path="/create" element={<CreateBlogPost />} />
-                <Route path="/post/:postId/edit" element={<EditPost />} />
+                <Route
+                  path="/blogPost/:blogPostId/edit"
+                  element={<EditBlogPost />}
+                />
               </Route>
             </Routes>
           </div>
