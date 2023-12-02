@@ -9,7 +9,7 @@ const Post = () => {
   const [data, setData] = useState({});
   const { email, userId, isAuthenticated } = useContext(AuthContext);
   const [likes, setLikes] = useState(0);
-  const [dislikes, setDislikes] = useState(0);
+  // const [dislikes, setDislikes] = useState(0);
   const [hasLiked, setHasLiked] = useState(false);
 
   const getPost = async () => {
@@ -21,19 +21,19 @@ const Post = () => {
   }, []);
 
   const handleLike = () => {
-    if (!hasLiked && isAuthenticated && !dislikes) {
+    if (!hasLiked && isAuthenticated) {
       setLikes(likes + 1);
       setHasLiked(true);
     }
   };
 
-  const handleDislike = () => {
-    if (hasLiked && isAuthenticated) {
-      setLikes(likes - 1);
-      setHasLiked(false);
-      setDislikes(dislikes + 1);
-    }
-  };
+  // const handleDislike = () => {
+  //   if (hasLiked && isAuthenticated) {
+  //     setLikes(likes - 1);
+  //     setHasLiked(false);
+  //     setDislikes(dislikes + 1);
+  //   }
+  // };
 
   return (
     <div className="post">
@@ -51,9 +51,9 @@ const Post = () => {
           <button onClick={handleLike} disabled={hasLiked} className="button">
             Likes {likes}
           </button>
-          <button onClick={handleDislike} className="button">
+          {/* <button onClick={handleDislike} className="button">
             Dislikes {dislikes}
-          </button>
+          </button> */}
         </div>
       ) : null}
     </div>
