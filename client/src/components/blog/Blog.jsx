@@ -20,6 +20,9 @@ const Blog = () => {
       <div className="12u">
         <section>
           <div className="5grid">
+            <header className="major">
+              <h2>All Blog Posts</h2>
+            </header>
             <div className="row">
               <div className="8u mobileUI-main-content">
                 {data.map((item) => (
