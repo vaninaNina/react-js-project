@@ -15,13 +15,10 @@ const EditBlogPost = () => {
   });
 
   useEffect(() => {
-    dataService.getBlogPost(blogPostId).then(
-      (result) => {
-        setBlogPost(result);
-      },
-      [blogPostId],
-    );
-  });
+    dataService.getBlogPost(blogPostId).then((result) => {
+      setBlogPost(result);
+    });
+  }, [blogPostId]);
 
   const editBlogPostSubmitHandler = async (e) => {
     e.preventDefault();
@@ -29,7 +26,7 @@ const EditBlogPost = () => {
     const values = Object.fromEntries(new FormData(e.currentTarget));
 
     try {
-      await dataService.editBlogPost(blogPostId, values);
+      await dataService.editBlogPost(blogPostId, blogPost);
       navigate("/blogPost");
     } catch (err) {
       console.log(err);
