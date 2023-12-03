@@ -36,13 +36,12 @@ const MyProfile = () => {
         <section>
           <ul>
             {myBlogPosts.map((blogPost) => (
-              <li>
-                <BlogPost
-                  key={blogPost._id}
-                  title={blogPost.title}
-                  text={blogPost.text}
-                />
-              </li>
+              <BlogPost
+                key={blogPost._id}
+                title={blogPost.title}
+                text={blogPost.text}
+                blogPostId={blogPost._id}
+              />
             ))}
           </ul>
         </section>
