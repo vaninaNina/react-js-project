@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import AuthContext from "../../context/authContext.jsx";
 import * as dataService from "../../services/dataService.js";
+import BlogPost from "../main-page/subcomponents/main_blog_post.jsx";
+import "./myProfileStyle.css";
 
 const MyProfile = () => {
   const { userId } = useContext(AuthContext);
@@ -31,11 +33,19 @@ const MyProfile = () => {
       {myBlogPosts.length <= 0 ? (
         <p>Empty record</p>
       ) : (
-        <ul>
-          {myBlogPosts.map((blogPost) => (
-            <li key={blogPost._id}>{blogPost.title}</li>
-          ))}
-        </ul>
+        <section>
+          <ul>
+            {myBlogPosts.map((blogPost) => (
+              <li>
+                <BlogPost
+                  key={blogPost._id}
+                  title={blogPost.title}
+                  text={blogPost.text}
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
     </div>
   );
