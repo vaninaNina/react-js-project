@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function useForm(submitHandler, initialValues) {
   const [values, setValues] = useState(initialValues);
-  // const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
   const onChange = (e) =>
     setValues((state) => ({
       ...state,
