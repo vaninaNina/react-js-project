@@ -122,7 +122,7 @@ const MainPage = () => {
                   key={item._id}
                   title={item.title}
                   description={`${item.description.slice(0, 100)}...`}
-                  img={item.img}
+                  img={item.imageUrl}
                   _id={item._id}
                 />
               ))}
@@ -139,7 +139,7 @@ const MainPage = () => {
                 <BlogPost
                   blogPostId={post._id}
                   key={post._id}
-                  img={post.img}
+                  img={post.imageUrl}
                   title={post.title}
                   text={`${post.text.slice(0, 100)}...`}
                 />

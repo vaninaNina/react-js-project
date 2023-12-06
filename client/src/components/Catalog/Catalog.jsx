@@ -35,7 +35,7 @@ const Catalog = () => {
                           _id={item._id}
                           title={item.title}
                           description={`${item.description.slice(0, 100)}...`}
-                          img={item.img}
+                          img={item.imageUrl}
                           author_name={item.author_name}
                           floor_price={item.floor_price}
                           _ownerId={item._ownerId}
