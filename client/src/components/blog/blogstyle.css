@@ -1,0 +1,22 @@
+.row .blogPost {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-stretch: normal;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 950px;
+}
+
+h2 {
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.image img {
+  max-width: 700px;
+  height: 850px;
+  max-height: auto;
+  margin-left: 10em;
+  margin-top: 2em;
+}

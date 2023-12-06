@@ -2,7 +2,7 @@ import "../../components/blog/blogstyle.css";
 import { useEffect, useState } from "react";
 import * as dataService from "../../services/dataService.js";
 import BlogPostCard from "./subcomponents/blogPostCard.jsx";
-
+import "../blog/blogstyle.css";
 const Blog = () => {
   const [data, setData] = useState([]);
 
@@ -24,7 +24,7 @@ const Blog = () => {
               <h2>All Blog Posts</h2>
             </header>
             <div className="row">
-              <div className="8u mobileUI-main-content">
+              <div className="blogPost">
                 {data.map((item) => (
                   <BlogPostCard
                     key={item._id}
