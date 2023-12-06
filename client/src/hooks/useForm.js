@@ -12,6 +12,7 @@ export default function useForm(submitHandler, initialValues) {
   const onSubmit = (e) => {
     e.preventDefault();
     submitHandler(values);
+    setValues(initialValues);
   };
 
   return {

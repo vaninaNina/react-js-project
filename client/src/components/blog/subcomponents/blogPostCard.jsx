@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const BlogPostCard = ({ img, title, text, _id, author }) => {
+  console.log(img);
   return (
     <article className="box is-post">
       <a href="#" className="image image-full">

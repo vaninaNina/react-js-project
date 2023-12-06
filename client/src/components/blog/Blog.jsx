@@ -10,10 +10,10 @@ const Blog = () => {
     const response = await dataService.getAllBlogPosts();
     setData(response);
   };
-
+  console.log(data);
   useEffect(() => {
     getData();
-  });
+  }, []);
 
   return (
     <div className="row">
@@ -31,7 +31,7 @@ const Blog = () => {
                     _id={item._id}
                     title={item.title}
                     text={item.text}
-                    img={item.img}
+                    img={item.imageUrl}
                     author={item.author}
                   />
                 ))}

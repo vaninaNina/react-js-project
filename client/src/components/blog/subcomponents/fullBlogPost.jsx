@@ -13,20 +13,19 @@ const FullBlogPost = () => {
   const { email, userId, isAuthenticated } = useContext(AuthContext);
   const [comments, dispatch] = useReducer(reducer, []);
 
-  const getBlogPost = async () => {
-    const response = await dataService.getBlogPost(blogPostId);
-    setData(response);
-  };
-  useEffect(() => {
-    getBlogPost();
-
-    commentService.getAll(blogPostId).then((result) => {
-      dispatch({
-        type: "GET_ALL_COMMENTS",
-        payload: result,
-      });
+  const getData = async () => {
+    const data = await dataService.getBlogPost(blogPostId);
+    const existingComments = await commentService.getAll(blogPostId);
+    dispatch({
+      type: "GET_ALL_COMMENTS",
+      payload: existingComments,
     });
-  }, [blogPostId]);
+    setData(data);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   const addCommentHandler = async (values) => {
     const newComment = await commentService.create(blogPostId, values.comment);

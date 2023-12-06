@@ -10,19 +10,19 @@
 var _5grid_settings = {
   breakpoint_1000px: 1200,
   breakpoint_mobile: 480,
-  prefix: 'style',
-  use: 'mobile,desktop',
+  prefix: "style",
+  use: "mobile,desktop",
   viewport_is1000px: 1040,
   viewport_is1200px: 1280,
   ////////////////////////////////////////////////////////
   mobileUI: 0,
   mobileUI_hideAddressBar: 0,
-  mobileUI_openerText: '=',
+  mobileUI_openerText: "=",
   mobileUI_openerWidth: 60,
   mobileUI_slideSpeed: 200,
-  mobileUI_theme: 'modern',
-  mobileUI_themeNavColor: '#1f1f1f',
-  mobileUI_themeTitleBarColor: '#444444',
+  mobileUI_theme: "modern",
+  mobileUI_themeNavColor: "#1f1f1f",
+  mobileUI_themeTitleBarColor: "#444444",
   mobileUI_titleBarFixed: 1,
   mobileUI_titleBarHeight: 44,
   mobileUI_titleBarOverlaid: 0,
@@ -42,11 +42,11 @@ var _5grid_settings = {
   var a = jQuery([]),
     e = (jQuery.resize = jQuery.extend(jQuery.resize, {})),
     i,
-    k = 'setTimeout',
-    j = 'resize',
-    d = j + '-special-event',
-    b = 'delay',
-    f = 'throttleWindow';
+    k = "setTimeout",
+    j = "resize",
+    d = j + "-special-event",
+    b = "delay",
+    f = "throttleWindow";
   e[b] = 250;
   e[f] = true;
   jQuery.event.special[j] = {
@@ -141,25 +141,25 @@ _5gridC.prototype.trigger = function (name) {
 _5gridC.prototype.ready = function (f, wait) {
   if (wait) this.readyWait = true;
 
-  this.bind('ready', f);
+  this.bind("ready", f);
 };
 
 // Custom events
 _5gridC.prototype.orientationChange = function (f) {
-  this.bind('orientationChange', f);
+  this.bind("orientationChange", f);
 };
 _5gridC.prototype.mobileUINavOpen = function (f) {
-  this.bind('mobileUINavOpen', f);
+  this.bind("mobileUINavOpen", f);
 };
 _5gridC.prototype.mobileUINavClose = function (f) {
-  this.bind('mobileUINavClose', f);
+  this.bind("mobileUINavClose", f);
 };
 
 _5gridC.prototype.readyCheck = function () {
   var x = this;
 
   window.setTimeout(function () {
-    if (x.isReady) x.trigger('ready');
+    if (x.isReady) x.trigger("ready");
     else x.readyCheck();
   }, 50);
 };
@@ -174,7 +174,7 @@ var _5grid = new _5gridC();
   // Vars
   var _settings = _5grid_settings,
     _window = jQuery(window),
-    _head = jQuery('head'),
+    _head = jQuery("head"),
     _document = jQuery(document);
   var baseURL,
     doFluid,
@@ -186,7 +186,7 @@ var _5grid = new _5gridC();
     isLocked = false,
     isTapLocked = false,
     tapId,
-    isTouch = !!('ontouchstart' in window),
+    isTouch = !!("ontouchstart" in window),
     headQueue = new Array();
   var v, w, wk, wv, x, y;
 
@@ -196,7 +196,7 @@ var _5grid = new _5gridC();
 
     if (isTouch) {
       target
-        .bind('touchstart' + (suffix ? '.' + suffix : ''), function () {
+        .bind("touchstart" + (suffix ? "." + suffix : ""), function () {
           if (!isTapLocked) {
             isTapLocked = true;
             if (_settings.mobileUI_tapDelay > -1)
@@ -206,7 +206,7 @@ var _5grid = new _5gridC();
               }, _settings.mobileUI_tapDelay);
           }
         })
-        .bind('touchend' + (suffix ? '.' + suffix : ''), function (e) {
+        .bind("touchend" + (suffix ? "." + suffix : ""), function (e) {
           if (isTapLocked) {
             isTapLocked = false;
             window.clearTimeout(tapId);
@@ -215,11 +215,11 @@ var _5grid = new _5gridC();
         });
 
       if (noMove)
-        target.bind('touchmove' + (suffix ? '.' + suffix : ''), function (e) {
+        target.bind("touchmove" + (suffix ? "." + suffix : ""), function (e) {
           isTapLocked = false;
           window.clearTimeout(tapId);
         });
-    } else target.bind('click' + (suffix ? '.' + suffix : ''), f);
+    } else target.bind("click" + (suffix ? "." + suffix : ""), f);
 
     return target;
   };
@@ -229,20 +229,20 @@ var _5grid = new _5gridC();
 
     if (isTouch) {
       target
-        .unbind('touchstart' + (suffix ? '.' + suffix : ''))
-        .unbind('touchend' + (suffix ? '.' + suffix : ''))
-        .unbind('touchmove' + (suffix ? '.' + suffix : ''));
-    } else target.unbind('click' + (suffix ? '.' + suffix : ''));
+        .unbind("touchstart" + (suffix ? "." + suffix : ""))
+        .unbind("touchend" + (suffix ? "." + suffix : ""))
+        .unbind("touchmove" + (suffix ? "." + suffix : ""));
+    } else target.unbind("click" + (suffix ? "." + suffix : ""));
 
     return target;
   };
 
   // Shortcut methods
   headQueue.pushI_5grid = function (s) {
-    headQueue.push({ type: 'i', value: s });
+    headQueue.push({ type: "i", value: s });
   };
   headQueue.pushE_5grid = function (s) {
-    headQueue.push({ type: 'e', value: s });
+    headQueue.push({ type: "e", value: s });
   };
   headQueue.process_5grid = function () {
     var doE;
@@ -252,53 +252,61 @@ var _5grid = new _5gridC();
       };
     else
       doE = function (s) {
-        _head.append('<link rel="stylesheet" href="' + s + '" />');
+        _head.append('<link rel="stylesheet" href="css/5grid/core.css" />');
+        _head.append('<link rel="stylesheet" href="css/style.css" />');
+        _head.append(
+          '<link rel="stylesheet" href="css/5grid/core-desktop.css" />',
+        );
+        _head.append('<link rel="stylesheet" href="css/style-desktop.css" />');
+        _head.append(
+          '<link rel="stylesheet" href="css/5grid/core-1200px.css" />',
+        );
       };
 
     for (x in headQueue) {
-      if (headQueue[x].type == 'i')
-        _head.append('<style>' + headQueue[x].value + '</style>');
-      else if (headQueue[x].type == 'e') doE(headQueue[x].value);
+      if (headQueue[x].type == "i")
+        _head.append("<style>" + headQueue[x].value + "</style>");
+      else if (headQueue[x].type == "e") doE(headQueue[x].value);
     }
   };
   jQuery.fn.disableSelection_5grid = function () {
     return jQuery(this)
-      .css('user-select', 'none')
-      .css('-khtml-user-select', 'none')
-      .css('-moz-user-select', 'none')
-      .css('-o-user-select', 'none')
-      .css('-webkit-user-select', 'none');
+      .css("user-select", "none")
+      .css("-khtml-user-select", "none")
+      .css("-moz-user-select", "none")
+      .css("-o-user-select", "none")
+      .css("-webkit-user-select", "none");
   };
   jQuery.fn.enableSelection_5grid = function () {
     return jQuery(this)
-      .css('user-select', 'auto')
-      .css('-khtml-user-select', 'auto')
-      .css('-moz-user-select', 'auto')
-      .css('-o-user-select', 'auto')
-      .css('-webkit-user-select', 'auto');
+      .css("user-select", "auto")
+      .css("-khtml-user-select", "auto")
+      .css("-moz-user-select", "auto")
+      .css("-o-user-select", "auto")
+      .css("-webkit-user-select", "auto");
   };
   jQuery.fn.accelerate_5grid = function () {
     return jQuery(this)
-      .css('-webkit-transform', 'translateZ(0)')
-      .css('-webkit-backface-visibility', 'hidden')
-      .css('-webkit-perspective', '500');
+      .css("-webkit-transform", "translateZ(0)")
+      .css("-webkit-backface-visibility", "hidden")
+      .css("-webkit-perspective", "500");
   };
 
   // Determine base URL, settings
-  x = jQuery('script')
+  x = jQuery("script")
     .filter(function () {
       return this.src.match(/5grid\/init\.js/);
     })
     .first();
-  y = x.attr('src').split('?');
-  baseURL = y[0].replace(/5grid\/init\.js/, '');
+  y = x.attr("src").split("?");
+  baseURL = y[0].replace(/5grid\/init\.js/, "");
 
   // Override settings
   if (y.length > 1) {
-    x = y[1].split('&');
+    x = y[1].split("&");
     for (v in x) {
-      w = x[v].split('=');
-      wk = w[0].replace(/\./, '_');
+      w = x[v].split("=");
+      wk = w[0].replace(/\./, "_");
       wv = w[1];
 
       // Thanks, @cmsalvado! :)
@@ -313,13 +321,13 @@ var _5grid = new _5gridC();
 
   // Determine viewing modes
   doDesktop = doMobile = doFluid = do1000px = do1200px = doMobileOnly = false;
-  v = _settings.use.split(',');
+  v = _settings.use.split(",");
 
-  if (jQuery.inArray('fluid', v) > -1) doFluid = true;
-  if (jQuery.inArray('desktop', v) > -1) doDesktop = true;
-  if (jQuery.inArray('1000px', v) > -1) do1000px = true;
-  if (jQuery.inArray('1200px', v) > -1) do1200px = true;
-  if (jQuery.inArray('mobile', v) > -1) doMobile = true;
+  if (jQuery.inArray("fluid", v) > -1) doFluid = true;
+  if (jQuery.inArray("desktop", v) > -1) doDesktop = true;
+  if (jQuery.inArray("1000px", v) > -1) do1000px = true;
+  if (jQuery.inArray("1200px", v) > -1) do1200px = true;
+  if (jQuery.inArray("mobile", v) > -1) doMobile = true;
 
   if (doMobile && !doFluid && !do1000px && !do1200px && !doDesktop)
     doMobileOnly = true;
@@ -343,27 +351,27 @@ var _5grid = new _5gridC();
     // Versions that don't support CSS3 pseudo classes
     if (jQuery.browser.version < 8) {
       jQuery(function () {
-        jQuery('.5grid, .5grid-layout, .do-5grid').after(
+        jQuery(".5grid, .5grid-layout, .do-5grid").after(
           '<div style="clear: both;"></div>',
         );
-        jQuery('.5grid-layout').css('position', 'relative');
-        jQuery('.5grid, .do-5grid').css('position', 'relative');
+        jQuery(".5grid-layout").css("position", "relative");
+        jQuery(".5grid, .do-5grid").css("position", "relative");
         jQuery(
-          '.5grid > .row > :first-child, .5grid-layout > .row > :first-child, .do-5grid > .row > :first-child',
-        ).css('margin-left', '0');
+          ".5grid > .row > :first-child, .5grid-layout > .row > :first-child, .do-5grid > .row > :first-child",
+        ).css("margin-left", "0");
         jQuery(
-          '.5grid > .row:first-child, .5grid-layout > .row:first-child, .do-5grid > .row:first-child',
-        ).css('margin-top', '0');
+          ".5grid > .row:first-child, .5grid-layout > .row:first-child, .do-5grid > .row:first-child",
+        ).css("margin-top", "0");
         jQuery(
-          '.5grid > .row:last-child, .5grid-layout > .row:last-child, .do-5grid > .row:last-child',
-        ).css('margin-bottom', '0');
+          ".5grid > .row:last-child, .5grid-layout > .row:last-child, .do-5grid > .row:last-child",
+        ).css("margin-bottom", "0");
       });
     }
   }
 
   // Insert stylesheets
-  headQueue.pushE_5grid(baseURL + '5grid/core.css');
-  headQueue.pushE_5grid(baseURL + _settings.prefix + '.css');
+  headQueue.pushE_5grid(baseURL + "5grid/core.css");
+  headQueue.pushE_5grid(baseURL + _settings.prefix + ".css");
 
   /*********************/
   /* Responsive        */
@@ -391,33 +399,33 @@ var _5grid = new _5gridC();
       _head.prepend(
         '<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />',
       );
-      headQueue.pushE_5grid(baseURL + '5grid/core-mobile.css');
+      headQueue.pushE_5grid(baseURL + "5grid/core-mobile.css");
 
       if (_settings.mobileUI == 1) {
         _settings.mobileUI_force = 1;
 
-        if (_settings.mobileUI_theme != 'none') {
+        if (_settings.mobileUI_theme != "none") {
           headQueue.pushE_5grid(
-            baseURL + '5grid/mobileUI-' + _settings.mobileUI_theme + '.css',
+            baseURL + "5grid/mobileUI-" + _settings.mobileUI_theme + ".css",
           );
 
           if (_settings.mobileUI_themeTitleBarColor)
             headQueue.pushI_5grid(
-              '#mobileUI-site-titlebar { background-color: ' +
+              "#mobileUI-site-titlebar { background-color: " +
                 _settings.mobileUI_themeTitleBarColor +
-                '; }',
+                "; }",
             );
 
           if (_settings.mobileUI_themeNavColor)
             headQueue.pushI_5grid(
-              '#mobileUI-site-nav { background-color: ' +
+              "#mobileUI-site-nav { background-color: " +
                 _settings.mobileUI_themeNavColor +
-                '; }',
+                "; }",
             );
         }
       }
 
-      headQueue.pushE_5grid(baseURL + _settings.prefix + '-mobile.css');
+      headQueue.pushE_5grid(baseURL + _settings.prefix + "-mobile.css");
     } else {
       // Fluid (exclusive)
       if (doFluid) {
@@ -427,15 +435,15 @@ var _5grid = new _5gridC();
             _settings.viewport_is1200px +
             '" />',
         );
-        headQueue.pushE_5grid(baseURL + '5grid/core-desktop.css');
-        headQueue.pushE_5grid(baseURL + '5grid/core-fluid.css');
-        headQueue.pushE_5grid(baseURL + _settings.prefix + '-fluid.css');
+        headQueue.pushE_5grid(baseURL + "5grid/core-desktop.css");
+        headQueue.pushE_5grid(baseURL + "5grid/core-fluid.css");
+        headQueue.pushE_5grid(baseURL + _settings.prefix + "-fluid.css");
       }
       // Desktop
       else if (doDesktop) {
         _5grid.isDesktop = true;
-        headQueue.pushE_5grid(baseURL + '5grid/core-desktop.css');
-        headQueue.pushE_5grid(baseURL + _settings.prefix + '-desktop.css');
+        headQueue.pushE_5grid(baseURL + "5grid/core-desktop.css");
+        headQueue.pushE_5grid(baseURL + _settings.prefix + "-desktop.css");
 
         // 1200px
         if (ww >= _settings.breakpoint_1000px) {
@@ -445,11 +453,11 @@ var _5grid = new _5gridC();
               _settings.viewport_is1200px +
               '" />',
           );
-          headQueue.pushE_5grid(baseURL + '5grid/core-1200px.css');
+          headQueue.pushE_5grid(baseURL + "5grid/core-1200px.css");
 
           // Load 1200px stylesheet if 1200px was explicitly enabled
           if (do1200px)
-            headQueue.pushE_5grid(baseURL + _settings.prefix + '-1200px.css');
+            headQueue.pushE_5grid(baseURL + _settings.prefix + "-1200px.css");
         }
         // 1000px
         else {
@@ -459,11 +467,11 @@ var _5grid = new _5gridC();
               _settings.viewport_is1000px +
               '" />',
           );
-          headQueue.pushE_5grid(baseURL + '5grid/core-1000px.css');
+          headQueue.pushE_5grid(baseURL + "5grid/core-1000px.css");
 
           // Load 1000px stylesheet if 1000px was explicitly enabled
           if (do1000px)
-            headQueue.pushE_5grid(baseURL + _settings.prefix + '-1000px.css');
+            headQueue.pushE_5grid(baseURL + _settings.prefix + "-1000px.css");
         }
       } else {
         // 1000px (exclusive)
@@ -475,9 +483,9 @@ var _5grid = new _5gridC();
               _settings.viewport_is1000px +
               '" />',
           );
-          headQueue.pushE_5grid(baseURL + '5grid/core-desktop.css');
-          headQueue.pushE_5grid(baseURL + '5grid/core-1000px.css');
-          headQueue.pushE_5grid(baseURL + _settings.prefix + '-1000px.css');
+          headQueue.pushE_5grid(baseURL + "5grid/core-desktop.css");
+          headQueue.pushE_5grid(baseURL + "5grid/core-1000px.css");
+          headQueue.pushE_5grid(baseURL + _settings.prefix + "-1000px.css");
         }
         // 1200px (exclusive)
         else if (do1200px && (ww >= _settings.breakpoint_1000px || !do1000px)) {
@@ -488,23 +496,23 @@ var _5grid = new _5gridC();
               _settings.viewport_is1200px +
               '" />',
           );
-          headQueue.pushE_5grid(baseURL + '5grid/core-desktop.css');
-          headQueue.pushE_5grid(baseURL + '5grid/core-1200px.css');
-          headQueue.pushE_5grid(baseURL + _settings.prefix + '-1200px.css');
+          headQueue.pushE_5grid(baseURL + "5grid/core-desktop.css");
+          headQueue.pushE_5grid(baseURL + "5grid/core-1200px.css");
+          headQueue.pushE_5grid(baseURL + _settings.prefix + "-1200px.css");
         }
       }
     }
 
     jQuery(function () {
-      var _body = jQuery('body');
+      var _body = jQuery("body");
 
-      if (_5grid.isFluid) _body.addClass('is-fluid');
-      if (_5grid.isDesktop) _body.addClass('is-desktop');
-      if (_5grid.is1000px) _body.addClass('is-1000px');
-      if (_5grid.is1200px) _body.addClass('is-1200px');
-      if (_5grid.isMobile) _body.addClass('is-mobile');
+      if (_5grid.isFluid) _body.addClass("is-fluid");
+      if (_5grid.isDesktop) _body.addClass("is-desktop");
+      if (_5grid.is1000px) _body.addClass("is-1000px");
+      if (_5grid.is1200px) _body.addClass("is-1200px");
+      if (_5grid.isMobile) _body.addClass("is-mobile");
 
-      jQuery('.5grid-layout').addClass('5grid');
+      jQuery(".5grid-layout").addClass("5grid");
     });
   })();
 
@@ -514,7 +522,7 @@ var _5grid = new _5gridC();
 
   if (_settings.mobileUI_force == 1)
     jQuery(function () {
-      var _body = jQuery('body'),
+      var _body = jQuery("body"),
         _viewer,
         _wrapper,
         _nav,
@@ -523,7 +531,7 @@ var _5grid = new _5gridC();
         _titlebar,
         _content;
       var speed = _settings.mobileUI_slideSpeed,
-        easing = 'swing',
+        easing = "swing",
         ww = _window.width(),
         wh = _window.height(),
         _nav_isActing = false,
@@ -534,8 +542,8 @@ var _5grid = new _5gridC();
       _body.wrapInner('<div id="mobileUI-site-viewer" />');
 
       // Move primary content
-      var _main_content = jQuery('.mobileUI-main-content'),
-        _main_content_target = jQuery('.mobileUI-main-content-target');
+      var _main_content = jQuery(".mobileUI-main-content"),
+        _main_content_target = jQuery(".mobileUI-main-content-target");
 
       if (_main_content.length > 0)
         if (_main_content_target.length > 0)
@@ -543,24 +551,24 @@ var _5grid = new _5gridC();
         else _main_content.prependTo(_main_content.parent());
 
       // Get site name, nav options
-      var x = jQuery('.mobileUI-site-name'),
-        site_name = x.length > 0 ? x.html() : '',
+      var x = jQuery(".mobileUI-site-name"),
+        site_name = x.length > 0 ? x.html() : "",
         site_nav_options = new Array();
 
-      jQuery('.mobileUI-site-nav a').each(function () {
+      jQuery(".mobileUI-site-nav a").each(function () {
         var t = jQuery(this),
           indent;
-        indent = Math.max(0, t.parents('li').length - 1);
+        indent = Math.max(0, t.parents("li").length - 1);
         site_nav_options.push(
           '<div class="mobileUI-site-nav-link mobileUI-site-nav-link-depth-' +
             indent +
             '" xhref="' +
-            t.attr('href') +
+            t.attr("href") +
             '"><span class="indent-' +
             indent +
             '"></span>' +
             t.text() +
-            '</div>',
+            "</div>",
         );
       });
 
@@ -568,15 +576,15 @@ var _5grid = new _5gridC();
       if (site_nav_options.length > 0) {
         _nav_inner = jQuery(
           '<div id="mobileUI-site-nav-inner"><nav>' +
-            site_nav_options.join('') +
-            '</nav></div>',
+            site_nav_options.join("") +
+            "</nav></div>",
         );
         _nav = jQuery('<div id="mobileUI-site-nav"></div>');
         _nav_inner.appendTo(_nav);
         _opener = jQuery(
           '<div id="mobileUI-site-nav-opener">' +
             _settings.mobileUI_openerText +
-            '</div>',
+            "</div>",
         );
       } else {
         _nav_inner = jQuery();
@@ -584,14 +592,14 @@ var _5grid = new _5gridC();
         _opener = jQuery();
       }
 
-      _content = jQuery('#mobileUI-site-content');
+      _content = jQuery("#mobileUI-site-content");
       _titlebar = jQuery(
         '<div id="mobileUI-site-titlebar"><div id="mobileUI-site-title">' +
           site_name +
-          '</div></div>',
+          "</div></div>",
       );
-      _wrapper = jQuery('#mobileUI-site-wrapper');
-      _viewer = jQuery('#mobileUI-site-viewer');
+      _wrapper = jQuery("#mobileUI-site-wrapper");
+      _viewer = jQuery("#mobileUI-site-viewer");
 
       var _nav_width = ww - _settings.mobileUI_openerWidth,
         _nav_inner_pos,
@@ -601,7 +609,7 @@ var _5grid = new _5gridC();
       // Wrapper
       _wrapper
         .accelerate_5grid()
-        .css('position', 'absolute')
+        .css("position", "absolute")
         .width(_wrapper_width);
 
       // Nav
@@ -609,20 +617,20 @@ var _5grid = new _5gridC();
         .accelerate_5grid()
         .width(_nav_width)
         .prependTo(_wrapper)
-        .css('position', 'absolute')
-        .css('left', -1 * _nav_width)
+        .css("position", "absolute")
+        .css("left", -1 * _nav_width)
         .prepend(
           '<div style="position: absolute; top: 0px; right: -1px; width: 1px; height: 1px;"></div>',
         );
 
       // Inner
       _nav_inner
-        .css('overflow', isTouch ? 'hidden' : 'auto')
-        .bind('touchstart', function (e) {
+        .css("overflow", isTouch ? "hidden" : "auto")
+        .bind("touchstart", function (e) {
           _nav_inner_pos =
             _nav_inner.scrollTop() + e.originalEvent.touches[0].pageY;
         })
-        .bind('touchmove', function (e) {
+        .bind("touchmove", function (e) {
           e.preventDefault();
           e.stopPropagation();
           _nav_inner.scrollTop(
@@ -632,9 +640,9 @@ var _5grid = new _5gridC();
 
       // Links
       _nav
-        .find('.mobileUI-site-nav-link')
+        .find(".mobileUI-site-nav-link")
         .disableSelection_5grid()
-        .css('cursor', 'pointer')
+        .css("cursor", "pointer")
         .each(function () {
           var t = jQuery(this);
           t.tap_5grid(function (e) {
@@ -642,9 +650,9 @@ var _5grid = new _5gridC();
             e.stopPropagation();
 
             if (_nav_isOpen) {
-              var href = t.attr('xhref');
+              var href = t.attr("xhref");
               if (href && href.length > 0)
-                _body.trigger('5grid_closeNav', [href]);
+                _body.trigger("5grid_closeNav", [href]);
             }
           });
         });
@@ -652,18 +660,18 @@ var _5grid = new _5gridC();
       // Opener
       _opener
         .accelerate_5grid()
-        .css('position', 'absolute')
-        .css('z-index', 10001)
-        .css('cursor', 'pointer')
+        .css("position", "absolute")
+        .css("z-index", 10001)
+        .css("cursor", "pointer")
         .disableSelection_5grid()
         .appendTo(_titlebar)
         .tap_5grid(
           function (e) {
             e.stopPropagation();
             e.preventDefault();
-            _body.trigger('5grid_toggleNav');
+            _body.trigger("5grid_toggleNav");
           },
-          '',
+          "",
           true,
         );
 
@@ -672,39 +680,39 @@ var _5grid = new _5gridC();
         .accelerate_5grid()
         .width(_content_width)
         .height(_settings.mobileUI_titleBarHeight)
-        .css('z-index', 10000)
+        .css("z-index", 10000)
         .prependTo(_viewer);
 
       if (_settings.mobileUI_titleBarFixed) {
         _titlebar
-          .bind('goActive_5grid', function () {
-            _titlebar.css('position', 'fixed').css('top', 0).css('left', 0);
+          .bind("goActive_5grid", function () {
+            _titlebar.css("position", "fixed").css("top", 0).css("left", 0);
           })
-          .bind('goInactive_5grid', function () {
+          .bind("goInactive_5grid", function () {
             _titlebar
-              .css('position', 'absolute')
-              .css('top', _window.scrollTop())
-              .css('left', _nav.width);
+              .css("position", "absolute")
+              .css("top", _window.scrollTop())
+              .css("left", _nav.width);
           })
-          .trigger('goActive_5grid');
+          .trigger("goActive_5grid");
       } else {
         _titlebar
-          .css('position', 'absolute')
-          .css('top', _window.scrollTop())
-          .css('left', _nav.width);
+          .css("position", "absolute")
+          .css("top", _window.scrollTop())
+          .css("left", _nav.width);
       }
 
       // Content
-      _content.width(_content_width).css('position', 'relative');
+      _content.width(_content_width).css("position", "relative");
 
       if (_settings.mobileUI_titleBarOverlaid)
-        _content.bind('resize', function () {
+        _content.bind("resize", function () {
           _viewer.height(_content.height());
         });
       else
         _content
-          .css('padding-top', _settings.mobileUI_titleBarHeight)
-          .bind('resize', function () {
+          .css("padding-top", _settings.mobileUI_titleBarHeight)
+          .bind("resize", function () {
             _viewer.height(
               _content.height() + _settings.mobileUI_titleBarHeight,
             );
@@ -712,18 +720,18 @@ var _5grid = new _5gridC();
 
       // Viewer
       _viewer
-        .css('position', 'absolute')
-        .css('overflow', 'hidden')
+        .css("position", "absolute")
+        .css("overflow", "hidden")
         .width(_content_width)
         .height(_content.height() + _settings.mobileUI_titleBarHeight);
 
       // Body
       _body
-        .bind('5grid_toggleNav', function () {
-          if (_nav_isOpen) _body.trigger('5grid_closeNav');
-          else _body.trigger('5grid_openNav');
+        .bind("5grid_toggleNav", function () {
+          if (_nav_isOpen) _body.trigger("5grid_closeNav");
+          else _body.trigger("5grid_openNav");
         })
-        .bind('5grid_openNav', function () {
+        .bind("5grid_openNav", function () {
           // Check locking
           if (isLocked) return true;
 
@@ -733,27 +741,27 @@ var _5grid = new _5gridC();
           _nav_isActing = true;
 
           // Disable scrolling
-          _body.bind('touchstart.5grid_nav_block', function (e) {
+          _body.bind("touchstart.5grid_nav_block", function (e) {
             e.stopPropagation();
             e.preventDefault();
           });
 
-          _window.bind('scroll.5grid_nav_block', function (e) {
+          _window.bind("scroll.5grid_nav_block", function (e) {
             e.preventDefault();
             e.stopPropagation();
 
-            if (_nav_isOpen) _body.trigger('5grid_closeNav', [null, true]);
+            if (_nav_isOpen) _body.trigger("5grid_closeNav", [null, true]);
           });
 
           // Reposition nav
-          _nav.css('top', _window.scrollTop());
+          _nav.css("top", _window.scrollTop());
 
           _nav_inner
             .height(window.innerHeight - _settings.mobileUI_navInnerPad)
             .scrollTop(0);
 
           // Deactivate titlebar
-          _titlebar.trigger('goInactive_5grid');
+          _titlebar.trigger("goInactive_5grid");
 
           // Animate
           _wrapper
@@ -763,8 +771,8 @@ var _5grid = new _5gridC();
               isLocked = false;
 
               // Correct body position (in case it was still scrolling when the nav opened)
-              var x = parseInt(_nav.css('top'));
-              if (x > 0) _window.scrollTop(parseInt(_nav.css('top')));
+              var x = parseInt(_nav.css("top"));
+              if (x > 0) _window.scrollTop(parseInt(_nav.css("top")));
 
               // Mark nav as open, unmark as acting
               window.setTimeout(function () {
@@ -776,14 +784,14 @@ var _5grid = new _5gridC();
               _content.tap_5grid(function (e) {
                 e.preventDefault();
                 e.stopPropagation();
-                _body.trigger('5grid_closeNav');
-              }, '5grid_nav_cclose');
+                _body.trigger("5grid_closeNav");
+              }, "5grid_nav_cclose");
 
               // Trigger event
-              _5grid.trigger('mobileUINavOpen');
+              _5grid.trigger("mobileUINavOpen");
             });
         })
-        .bind('5grid_closeNav', function (e, url, fast) {
+        .bind("5grid_closeNav", function (e, url, fast) {
           // Check locking
           if (isLocked) return true;
 
@@ -793,24 +801,24 @@ var _5grid = new _5gridC();
           _nav_isActing = true;
 
           // Remove close event from content
-          _content.untap_5grid('5grid_nav_cclose');
+          _content.untap_5grid("5grid_nav_cclose");
 
           // Animate
           _wrapper
             .add(_titlebar)
             .animate({ left: 0 }, fast ? 0 : speed, easing, function () {
               // Reactivate titlebar
-              _titlebar.trigger('goActive_5grid');
+              _titlebar.trigger("goActive_5grid");
 
               // Trigger event
-              _5grid.trigger('mobileUINavclose');
+              _5grid.trigger("mobileUINavclose");
 
               // Unlock
               isLocked = false;
 
               // Re-enable scrolling
-              _body.unbind('touchstart.5grid_nav_block');
-              _window.unbind('touchmove.5grid_nav_block');
+              _body.unbind("touchstart.5grid_nav_block");
+              _window.unbind("touchmove.5grid_nav_block");
 
               // Mark nav as closed, unmark as acting
               _nav_isOpen = false;
@@ -825,7 +833,7 @@ var _5grid = new _5gridC();
         });
 
       // Window
-      _window.bind('orientationchange', function (e) {
+      _window.bind("orientationchange", function (e) {
         // Recalculate widths
         ww = _window.width();
         _nav_width = ww - _settings.mobileUI_openerWidth;
@@ -835,17 +843,17 @@ var _5grid = new _5gridC();
         // Resize
         _wrapper.width(_wrapper_width);
         _content.width(_content_width);
-        _nav.css('left', -1 * _nav_width).width(_nav_width);
+        _nav.css("left", -1 * _nav_width).width(_nav_width);
 
         _titlebar.width(ww);
         _viewer.width(ww);
 
         // Trigger event
-        _5grid.trigger('orientationChange');
+        _5grid.trigger("orientationChange");
       });
 
       // Remove mobileUI-hide elements
-      jQuery('.mobileUI-hide').remove();
+      jQuery(".mobileUI-hide").remove();
 
       // Remove address bar
       if (_settings.mobileUI_hideAddressBar == 1)
