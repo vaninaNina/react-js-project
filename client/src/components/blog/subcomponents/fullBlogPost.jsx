@@ -45,9 +45,13 @@ const FullBlogPost = () => {
     );
 
     if (hasConfirmed) {
-      await dataService.del(blogPostId);
-
-      navigate("/blogPost");
+      try {
+        await dataService.del(blogPostId);
+        navigate("/blogPost");
+      } catch (err) {
+        console.log(err);
+        alert(`Error: ${err}`);
+      }
     }
   };
 
