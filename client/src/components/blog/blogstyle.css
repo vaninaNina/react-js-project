@@ -1,4 +1,4 @@
-.row .blogPost {
+#blogPost {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-stretch: normal;
   text-align: justify;
@@ -8,12 +8,12 @@
   max-width: 950px;
 }
 
-h2 {
+#blogPost h2 {
   line-height: 1.2em;
   text-align: center;
 }
 
-.image img {
+#blogPost .image img {
   max-width: 700px;
   height: 850px;
   max-height: auto;

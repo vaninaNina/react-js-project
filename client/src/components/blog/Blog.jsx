@@ -24,7 +24,7 @@ const Blog = () => {
               <h2>All Blog Posts</h2>
             </header>
             <div className="row">
-              <div className="blogPost">
+              <div id="blogPost">
                 {data.map((item) => (
                   <BlogPostCard
                     key={item._id}

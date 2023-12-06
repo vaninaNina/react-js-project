@@ -64,7 +64,7 @@ const FullBlogPost = () => {
 
   return (
     <div className="container">
-      <img src={`../${data.img}`} alt="Blog Post Image" />
+      <img src={`../${data.imageUrl}`} alt="Blog Post Image" />
       <h2>{data.title}</h2>
       <p>{data.text}</p>
       <p className="author">Author Name: {data.author}</p>
