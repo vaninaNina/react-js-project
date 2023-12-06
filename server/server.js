@@ -1364,7 +1364,7 @@
     	},
     	blogPost: {
     		"7e8d9a0b1-2c3d4e5-6f7a8b9-1c2d3e4": {
-    			img: "images/pic08.jpg",
+    			imageUrl: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     			_id: "7e8d9a0b1-2c3d4e5-6f7a8b9-1c2d3e4",
     			title: "Navigating the NFT Revolution: A Beginner's Guide to Non-Fungible Tokens",
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
@@ -1372,7 +1372,7 @@
     			text: "In recent years, a technological wave has transformed the way we perceive and trade digital assets, and at the forefront of this revolution are Non-Fungible Tokens (NFTs). NFTs have gained unprecedented popularity, captivating the art, entertainment, and gaming industries. Let's delve into the world of NFTs, exploring what they are, how they work, and why they've become a game-changer in the digital landscape. Understanding NFTs: NFTs are unique digital assets that represent ownership or proof of authenticity of a specific item or piece of content, typically stored on a blockchain. Unlike cryptocurrencies such as Bitcoin or Ethereum, which are fungible and can be exchanged on a one-to-one basis, NFTs are indivisible and cannot be replicated.In conclusion, NFTs represent a paradigm shift in the digital economy, offering creators new ways to monetize their work and buyers unique opportunities to own and trade digital assets. As the technology continues to mature, the impact of NFTs on various industries is likely to deepen, making them a fascinating and transformative force in the world of digital ownership."
     		},
     		"6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0": {
-    			img: "images/pic09.jpg",
+    			imageUrl: "https://images.unsplash.com/photo-1637416067365-2b5e7e8fe8fa?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     			_id: "6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0",
     			title: "The Rise of NFTs in the Art World: Revolutionizing Ownership and Creativity",
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1382,10 +1382,10 @@
     	},
     	nfts: {
     		"9a8b7e6d5-4c3a2f1-8d7e9b1-a4b5c6": {
-    			title: "The Wild Woman",
-    			description: "Immerse yourself in the untamed spirit of The Wild Woman an electrifying and empowering NFT that captures the essence of feminine strength and freedom. This digital masterpiece, created by the visionary artist Emily Artiste, depicts a fierce and wild woman adorned with vibrant, swirling patterns that symbolize the untamed energy of nature itself. ",
+    			title: "The Female",
+    			description: "Immerse yourself in the untamed spirit of The Female an electrifying and empowering NFT that captures the essence of feminine strength and freedom. This digital masterpiece, created by the visionary artist Emily Artiste, depicts a fierce and wild woman adorned with vibrant, swirling patterns that symbolize the untamed energy of nature itself. ",
     			floor_price: 2.5,
-    			img: "images/pic03.jpg",
+    			imageUrl: "https://images.unsplash.com/photo-1641391503184-a2131018701b?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     			author_name: "Emily Artiste",
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
     			_id: "9a8b7e6d5-4c3a2f1-8d7e9b1-a4b5c6"
@@ -1394,43 +1394,43 @@
     			title: "Art is power",
     			description: "Art is Power is not just an NFT; it's a visual manifesto that celebrates the transformative force of artistic expression. Crafted by the visionary artist Sculptor Smith, this digital masterpiece radiates energy, color, and the indomitable spirit of creativity.",
     			floor_price: 5,
-    			img: "images/pic04.jpg",
+    			imageUrl: "https://images.unsplash.com/photo-1636889647964-c759d54751ef?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     			author_name: "Sculptor Smith",
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
     			_id: "8e7b6a2-3f8c-4d9b-a1d2-9e8a7b6d5c4"
     		},
     		"e5b4d3a7-6c8f-4d9a-b3e2-1f8e9a4b5c6": {
-    			title: "'WE' is better than 'ME'",
-    			description: "Step into the heart of collaboration and unity with the NFT masterpiece, WE is Better than ME. Crafted by the innovative artist CodeCanvas, this digital artwork encapsulates the essence of collective strength and shared purpose.",
+    			title: "Burning Love",
+    			description: "Burning Love is an impassioned NFT that captures the intensity and fervor of emotions. This digital masterpiece is ablaze with fiery hues and evocative imagery, symbolizing the passionate essence of love. ",
     			floor_price: 1.8,
-    			img: "images/pic07.jpg",
+    			imageUrl: "https://images.unsplash.com/photo-1650229785916-2cbfe89c72c8?q=80&w=2160&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     			author_name: "CodeCanvas",
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
     			_id: "e5b4d3a7-6c8f-4d9a-b3e2-1f8e9a4b5c6"
     		},
     		"2d4b6c9-8a0e-4d3c-9b1a-7e8f6a5b3c2f": {
-    			title: "Cartoon Critters Collection",
-    			description: "Dive into a world of whimsy and charm with the Cartoon Critters Collection, an adorable NFT series that brings to life a cast of lovable and quirky cartoon animals. Created by the imaginative artist CartoonCraftsman, this digital collection is a celebration of joy, laughter, and the timeless appeal of animated characters.",
+    			title: "Pink Dreams",
+    			description: "Pink Dreams is a captivating NFT that immerses viewers in a surreal world of rosy hues and ethereal visions. This digital masterpiece, rendered with meticulous detail, explores the intersection of imagination and reality, inviting its audience to traverse the dreamlike landscapes within.",
     			floor_price: 3.2,
-    			img: "images/pic02.jpg",
+    			imageUrl: "https://images.unsplash.com/photo-1659872680794-abe4dca1a44f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTk4fHxkaWdpdGFsJTIwYXJ0fGVufDB8fDB8fHww",
     			author_name: "CartoonCraftsman",
     			_ownerId: "4809",
     			_id: "2d4b6c9-8a0e-4d3c-9b1a-7e8f6a5b3c2f"
     		},
     		"f7e2a1-1b2d-4f85-89a7-6d3a2c9e0f4b": {
-    			title: "Cute Boy Gasho",
-    			description: "Meet Cute Boy Gasho, a lovable character brought to life with vibrant colors and playful details. Crafted by the imaginative artist GlassCraftsman, this digital creation is a celebration of childhood wonder and the magic found in the simplest joys.",
+    			title: "Spaceman",
+    			description: "Spaceman is an otherworldly NFT that propels collectors into the cosmic frontier. This digital masterpiece captures the essence of exploration, encapsulating the spirit of an intrepid astronaut navigating the vastness of space. ",
     			floor_price: 4.5,
-    			img: "images/pic05.jpg",
+    			imageUrl: "https://images.unsplash.com/photo-1635243824676-e2f0f45a88e8?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     			author_name: "GlassCraftsman",
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
     			_id: "f7e2a1-1b2d-4f85-89a7-6d3a2c9e0f4b"
     		},
     		"9bae6d8-793e-46c4-a9db-deb9e34849": {
     			title: "Summer Bliss",
-    			description: "Immerse yourself in the vibrant hues and carefree spirit of the Summer Bliss, a collection of NFTs that encapsulates the essence of sun-soaked days and breezy nights. Crafted by the talented artist CreativeMind, this digital series invites you to experience the joy and warmth of summer in every pixel.",
+    			description: "Summer Bliss is a sun-soaked NFT that transports its audience to a realm of warmth and serenity. This digital masterpiece captures the essence of summer's joy, featuring vibrant colors and idyllic scenes that evoke the carefree spirit of the season. ",
     			floor_price: 6,
-    			img: "images/pic06.jpg",
+    			imageUrl: "https://images.unsplash.com/photo-1629976002376-3bccae77037d?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     			author_name: "CreativeMind",
     			_ownerId: "5921",
     			_id: "9bae6d8-793e-46c4-a9db-deb9e34849"
