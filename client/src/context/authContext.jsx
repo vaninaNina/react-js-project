@@ -19,13 +19,15 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("accessToken", result.accessToken);
 
       navigate("/");
-    } catch (e) {
-      console.log("loginSubmitHandler error:", e);
+    } catch (err) {
+      console.log("loginSubmitHandler error:", err);
     }
   };
 
   const registerSubmitHandler = async (values) => {
     try {
+      const result = await authService.register(values.email, values.password);
+
       setAuth(result);
 
       localStorage.setItem("accessToken", result.accessToken);

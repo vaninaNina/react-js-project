@@ -7,7 +7,7 @@ import useForm from "../../hooks/useForm.js";
 const RegisterFormKeys = {
   Email: "email",
   Password: "password",
-  ConfirmPassword: "confirm-password",
+  // ConfirmPassword: "confirm-password",
 };
 
 const Register = () => {
@@ -15,7 +15,7 @@ const Register = () => {
   const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
     [RegisterFormKeys.Email]: "",
     [RegisterFormKeys.Password]: "",
-    [RegisterFormKeys.ConfirmPassword]: "",
+    // [RegisterFormKeys.ConfirmPassword]: "",
   });
 
   return (
@@ -40,14 +40,14 @@ const Register = () => {
           name="password"
         />
 
-        <label htmlFor="con-password">Confirm Password:</label>
+        {/* <label htmlFor="con-password">Confirm Password:</label>
         <input
           value={values[RegisterFormKeys.ConfirmPassword]}
           onChange={onChange}
           type="password"
           id="confirm-password"
           name="confirm-password"
-        />
+        /> */}
 
         <button type="submit">Register</button>
       </form>
