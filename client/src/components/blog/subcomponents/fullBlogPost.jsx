@@ -38,6 +38,10 @@ const FullBlogPost = () => {
     });
   };
 
+  const deleteHandler = async (values) => {
+    await commentService.del(blogPostId, values.comment);
+  };
+
   const deleteButtonClickHandler = async () => {
     const hasConfirmed = confirm(
       `Are you sure you want to delete ${data.title}`,
@@ -89,6 +93,7 @@ const FullBlogPost = () => {
               <p>
                 {email}: {text}
               </p>
+              <button onSubmit={deleteHandler}>Delete comment</button>
             </li>
           ))}
         </ul>

@@ -21,3 +21,7 @@ export const create = async (blogPostId, text) => {
 
   return newComment;
 };
+
+export const del = async (blogPostId, text) => {
+  await request.del(baseUrl, { blogPostId, text });
+};
