@@ -12,6 +12,14 @@ export const AuthProvider = ({ children }) => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
   const loginSubmitHandler = async (values) => {
     try {
+      if (!values.email || !values.password) {
+        alert("Email and password are required.");
+        return;
+      }
+      if (!regex.test(values.email)) {
+        alert("This is not a valid email format!");
+        return;
+      }
       const result = await authService.login(values.email, values.password);
 
       setAuth(result);
@@ -21,6 +29,7 @@ export const AuthProvider = ({ children }) => {
       navigate("/");
     } catch (err) {
       console.log("loginSubmitHandler error:", err);
+      alert(err.message);
     }
   };
 
@@ -53,7 +62,7 @@ export const AuthProvider = ({ children }) => {
       navigate("/");
     } catch (err) {
       console.error("registerSubmitHandler error:", err);
-      alert(err);
+      alert(err.message);
     }
   };
 

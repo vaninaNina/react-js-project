@@ -34,7 +34,7 @@ const Post = () => {
     if (hasLiked) {
       setLikes(likes - 1);
       setHasLiked(false);
-      await likesService.removeLike(userId);
+      await likesService.removeLike(postId);
     } else {
       setLikes(likes + 1);
       setHasLiked(true);
