@@ -64,11 +64,10 @@ const FullBlogPost = () => {
 
   return (
     <div className="container">
-      <img src={`../${data.imageUrl}`} alt="Blog Post Image" />
+      <img src={data.imageUrl} alt="Blog Post Image" />
       <h2>{data.title}</h2>
       <p>{data.text}</p>
       <p className="author">Author Name: {data.author}</p>
-
       {userId === data._ownerId ? (
         <div className="buttons" style={{ gap: "0.4em" }}>
           <Link to={`/blogPost/${data._id}/edit`} className="button">
@@ -84,7 +83,6 @@ const FullBlogPost = () => {
           </Link>
         </div>
       ) : null}
-
       <div className="details-comments">
         <h2>Comments:</h2>
         <ul>
