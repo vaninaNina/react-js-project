@@ -6,6 +6,7 @@ import "./myProfileStyle.css";
 
 const MyProfile = () => {
   const { userId } = useContext(AuthContext);
+  const { email } = useContext(AuthContext);
   const [myBlogPosts, setMyBlogPosts] = useState([]);
 
   useEffect(() => {
@@ -27,25 +28,33 @@ const MyProfile = () => {
   }, [userId]);
 
   return (
-    <div>
-      <h1>My Blog Posts</h1>
-
-      {myBlogPosts.length <= 0 ? (
-        <p>Empty record</p>
-      ) : (
+    <div className="boxes">
+      <div className="personalDetails">
+        <h2>My Personal Information</h2>
         <section>
-          <ul>
-            {myBlogPosts.map((blogPost) => (
-              <BlogPost
-                key={blogPost._id}
-                title={blogPost.title}
-                text={blogPost.text}
-                blogPostId={blogPost._id}
-              />
-            ))}
-          </ul>
+          <p>{`My email address: ${email}`}</p>
         </section>
-      )}
+      </div>
+      <div className="myBlogPosts">
+        <h2>My Blog Posts</h2>
+        {myBlogPosts.length <= 0 ? (
+          <p>Empty record</p>
+        ) : (
+          <section className="posts">
+            <ul>
+              {myBlogPosts.map((blogPost) => (
+                <BlogPost
+                  key={blogPost._id}
+                  title={blogPost.title}
+                  text={`${blogPost.text.slice(0, 80)}...`}
+                  blogPostId={blogPost._id}
+                  img={blogPost.imageUrl}
+                />
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
     </div>
   );
 };

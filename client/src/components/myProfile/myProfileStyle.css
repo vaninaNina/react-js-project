@@ -10,3 +10,17 @@ ul li {
 p {
   font-size: 25px;
 }
+
+div.personalDetails {
+  margin-bottom: 9em;
+}
+
+.posts ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.posts ul li {
+  flex-grow: 45%;
+  max-width: 750px;
+}
