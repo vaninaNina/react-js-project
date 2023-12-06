@@ -1,5 +1,11 @@
 .row {
   display: flex;
-  gap: 4em;
+
   justify-content: center;
+}
+
+section.box {
+  max-width: 450px;
+  max-height: 1000px;
+  margin-left: 5em;
 }
