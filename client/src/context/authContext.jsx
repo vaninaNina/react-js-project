@@ -26,6 +26,24 @@ export const AuthProvider = ({ children }) => {
 
   const registerSubmitHandler = async (values) => {
     try {
+      console.log(values);
+      if (!values.email || !values.password || !values["confirm-password"]) {
+        alert("Email and password are required.");
+        return;
+      }
+      if (!regex.test(values.email)) {
+        alert("This is not a valid email format!");
+        return;
+      }
+      if (values.password.length < 3 && values["confirm-password"].length < 3) {
+        alert("Password must be more than 3 characters");
+        return;
+      }
+      if (values.password !== values["confirm-password"]) {
+        alert("The passwords should be the same!");
+        return;
+      }
+
       const result = await authService.register(values.email, values.password);
 
       setAuth(result);
@@ -35,6 +53,7 @@ export const AuthProvider = ({ children }) => {
       navigate("/");
     } catch (err) {
       console.error("registerSubmitHandler error:", err);
+      alert(err);
     }
   };
 
