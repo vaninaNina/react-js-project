@@ -1,10 +1,19 @@
 import "../createBlogPost/create.css";
-
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as dataService from "../../services/dataService.js";
 
 const CreateBlogPost = () => {
   const navigate = useNavigate();
+
+  const [imageUrl, setImageUrl] = useState("");
+  const [previewUrl, setPreviewUrl] = useState("");
+
+  const handleImageUrlChange = (event) => {
+    const url = event.target.value;
+    setImageUrl(url);
+    setPreviewUrl(url);
+  };
 
   const createBlogPostSubmitHandler = async (e) => {
     e.preventDefault();
@@ -39,8 +48,16 @@ const CreateBlogPost = () => {
           type="text"
           id="imageUrl"
           name="imageUrl"
+          value={imageUrl}
+          onChange={handleImageUrlChange}
           placeholder="Place the URL image..."
         />
+        {previewUrl && (
+          <div>
+            <p>Image Preview:</p>
+            <img src={previewUrl} alt="Preview" style={{ maxWidth: "100%" }} />
+          </div>
+        )}
         <button type="submit">Create</button>
       </form>
     </div>
