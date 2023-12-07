@@ -38,8 +38,16 @@ const FullBlogPost = () => {
     });
   };
 
-  const deleteHandler = async (values) => {
-    await commentService.del(blogPostId, values.comment);
+  const deleteCommentHandler = async (blogPostId, commentId) => {
+    try {
+      await commentService.del(blogPostId, commentId);
+      dispatch({
+        type: "DELETE_COMMENT",
+        payload: commentId,
+      });
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+    }
   };
 
   const deleteButtonClickHandler = async () => {
@@ -91,7 +99,12 @@ const FullBlogPost = () => {
               <p>
                 {email}: {text}
               </p>
-              <button onSubmit={deleteHandler}>Delete comment</button>
+              <button
+                className="button"
+                onClick={() => deleteCommentHandler(blogPostId, _id)}
+              >
+                Delete comment
+              </button>
             </li>
           ))}
         </ul>

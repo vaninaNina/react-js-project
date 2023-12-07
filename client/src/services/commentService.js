@@ -22,6 +22,11 @@ export const create = async (blogPostId, text) => {
   return newComment;
 };
 
-export const del = async (blogPostId, text) => {
-  await request.del(baseUrl, { blogPostId, text });
+export const del = async (blogPostId, _id) => {
+  const query = new URLSearchParams({
+    blogPostId,
+    commentId: _id,
+  });
+
+  await request.del(`${baseUrl}?${query}`);
 };
