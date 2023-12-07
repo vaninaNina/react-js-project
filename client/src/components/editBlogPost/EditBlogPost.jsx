@@ -27,7 +27,7 @@ const EditBlogPost = () => {
 
     try {
       await dataService.editBlogPost(blogPostId, blogPost);
-      navigate("/blogPost");
+      navigate(`/blogPost/${blogPostId}`);
     } catch (err) {
       console.log(err);
       // alert(err);
