@@ -1438,7 +1438,7 @@
     	},
     	wallpaper: {
     		"9403dbbfij-ejwj2-eiien3296": {
-    			imageUrl: "https://images.unsplash.com/photo-1633783156075-a01661455344?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    			imageUrl: "https://images.unsplash.com/photo-1604355714851-c1d5990e1696?q=80&w=3068&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     			_id: "9403dbbfij-ejwj2-eiien3296",
     			title: "Main wallpaper"
     		}
