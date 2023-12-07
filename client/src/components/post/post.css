@@ -6,7 +6,7 @@ body {
 
 .post {
   max-width: 550px;
-  max-height: 650px;
+  max-height: 690px;
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -29,8 +29,4 @@ body {
   font-size: 14px;
 
   margin-bottom: 5px;
-}
-
-.buttons {
-  display: flex;
 }

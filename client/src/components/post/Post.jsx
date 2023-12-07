@@ -55,15 +55,19 @@ const Post = () => {
       <p className="floor-price">Floor Price: {data["floor_price"]} ETH </p>
 
       {userId ? (
-        <div className="buttons" style={{ gap: "0.4em" }}>
-          <button onClick={handleLike} className="button">
-            Likes {likes}
-          </button>
-          {/* <button onClick={handleDislike} className="button">
+        // <div className="buttons" >
+        <button
+          onClick={handleLike}
+          className="button"
+          style={{ gap: "0.4em" }}
+        >
+          Likes {likes}
+        </button>
+      ) : /* <button onClick={handleDislike} className="button">
             Dislikes {dislikes}
-          </button> */}
-        </div>
-      ) : null}
+          </button> */
+      // </div>
+      null}
     </div>
   );
 };
