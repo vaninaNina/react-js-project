@@ -30,7 +30,7 @@ const EditBlogPost = () => {
       navigate("/blogPost");
     } catch (err) {
       console.log(err);
-      alert(err);
+      // alert(err);
     }
   };
 
@@ -79,7 +79,7 @@ const EditBlogPost = () => {
           type="text"
           id="imageUrl"
           name="imageUrl"
-          value={blogPost.img}
+          value={blogPost.imageUrl}
           onChange={onChange}
           placeholder="Place the URL image..."
         />

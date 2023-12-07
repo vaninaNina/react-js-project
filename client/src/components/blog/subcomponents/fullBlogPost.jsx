@@ -53,7 +53,7 @@ const FullBlogPost = () => {
         navigate("/blogPost");
       } catch (err) {
         console.log(err);
-        alert(`Error: ${err}`);
+        // alert(`Error: ${err}`);
       }
     }
   };
