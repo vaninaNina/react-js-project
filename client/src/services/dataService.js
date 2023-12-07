@@ -4,7 +4,6 @@ const baseUrl = "http://localhost:3030/data";
 
 export const getWallpaperPic = async () => {
   const result = await request.get(`${baseUrl}/wallpaper`);
-  console.log(result);
   return result;
 };
 
