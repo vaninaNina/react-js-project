@@ -44,10 +44,14 @@ export const AuthProvider = ({ children }) => {
         alert("This is not a valid email format!");
         return;
       }
-      if (values.password.length < 3 && values["confirm-password"].length < 3) {
+      if (
+        values.password.length <= 3 &&
+        values["confirm-password"].length <= 3
+      ) {
         alert("Password must be more than 3 characters");
         return;
       }
+
       if (values.password !== values["confirm-password"]) {
         alert("The passwords should be the same!");
         return;
