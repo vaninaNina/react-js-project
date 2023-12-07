@@ -16,10 +16,10 @@ export default class ErrorBoundary extends Component {
     };
   }
 
-  componentDidCatch(error, errorInfo) {
-    console.log("componentDidCatch");
-    // TODO logging
-  }
+  // componentDidCatch(error, errorInfo) {
+  //   console.log("componentDidCatch");
+  //   // TODO logging
+  // }
 
   render() {
     if (this.state.hasError) {
