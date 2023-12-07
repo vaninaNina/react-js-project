@@ -10,6 +10,20 @@ const MainPage = () => {
   const [data, setData] = useState([]);
   const [blogPost, setBlogPost] = useState([]);
   const [fronText, setFrontText] = useState([]);
+  const [wallpaper, setWallpaper] = useState({});
+
+  const getWallpaper = async () => {
+    try {
+      const response = await dataService.getWallpaperPic();
+      setWallpaper(response[0]);
+      console.log(wallpaper);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  useEffect(() => {
+    getWallpaper();
+  }, []);
 
   const getData = async () => {
     try {
@@ -57,7 +71,7 @@ const MainPage = () => {
         <section id="banner">
           <a href="#">
             <span className="image image-full">
-              <img src="images/pic01.jpg" alt="" />
+              <img src={wallpaper.imageUrl} alt="" />
             </span>
             <header>
               <h2>Howdy. This is Dopetrope.</h2>

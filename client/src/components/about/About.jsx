@@ -1,4 +1,20 @@
+import { useState, useEffect } from "react";
+import * as dataService from "../../services/dataService.js";
+
 const About = () => {
+  const [wallpaper, setWallpaper] = useState({});
+
+  const getWallpaper = async () => {
+    try {
+      const response = await dataService.getWallpaperPic();
+      setWallpaper(response[0]);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  useEffect(() => {
+    getWallpaper();
+  }, []);
   return (
     <div className="row">
       <div className="12u">
@@ -8,7 +24,7 @@ const About = () => {
               <div className="12u mobileUI-main-content">
                 <article className="box is-post">
                   <a href="#" className="image image-full">
-                    <img src="images/pic01.jpg" alt="" />
+                    <img src={wallpaper.imageUrl} alt="" />
                   </a>
                   <header>
                     <h2>Welcome to The Droptrope NTF World</h2>
