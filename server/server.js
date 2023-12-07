@@ -1436,6 +1436,13 @@
     			_id: "9bae6d8-793e-46c4-a9db-deb9e34849"
     		}
     	},
+    	wallpaper: {
+    		"9403dbbfij-ejwj2-eiien3296": {
+    			imageUrl: "https://images.unsplash.com/photo-1633783156075-a01661455344?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    			_id: "9403dbbfij-ejwj2-eiien3296",
+    			title: "Main wallpaper"
+    		}
+    	},
     	recipes: {
     		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
