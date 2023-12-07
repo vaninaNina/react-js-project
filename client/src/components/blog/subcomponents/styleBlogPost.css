@@ -56,3 +56,15 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+li.comment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment button {
+  max-width: 180px;
+  max-height: 180px;
+  text-align: center;
+  font-size: 12px;
+}
