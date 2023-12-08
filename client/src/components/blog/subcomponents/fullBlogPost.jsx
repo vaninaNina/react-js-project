@@ -30,7 +30,7 @@ const FullBlogPost = () => {
   const addCommentHandler = async (values) => {
     const newComment = await commentService.create(blogPostId, values.comment);
 
-    newComment.owner = { email };
+    newComment.owner = { email, _id: userId };
 
     dispatch({
       type: "ADD_COMMENT",
@@ -97,20 +97,26 @@ const FullBlogPost = () => {
       <div className="details-comments">
         <h2>Comments:</h2>
         <ul>
-          {comments.map(({ _id, text, owner: { email } }) => (
-            <li key={_id} className="comment">
-              <p>
-                {email}: {text}
-                {/* {console.log(comments[1].owner.email)} */}
-              </p>
-              <button
-                className="button"
-                onClick={() => deleteCommentHandler(_id)}
-              >
-                Delete comment
-              </button>
-            </li>
-          ))}
+          {comments.map(
+            ({ _id, text, owner: { email, _id: ownerId }, owner }) => (
+              <li key={_id} className="comment">
+                <p>
+                  {email}: {text}
+                  {/* {console.log(comments[1].owner.email)} */}
+                </p>
+                {console.log(userId)}
+                {console.log(owner)}
+                {userId === ownerId ? (
+                  <button
+                    className="button"
+                    onClick={() => deleteCommentHandler(_id)}
+                  >
+                    Delete comment
+                  </button>
+                ) : null}
+              </li>
+            ),
+          )}
         </ul>
         {comments.length === 0 && <p className="no-comment">No comments.</p>}
       </div>

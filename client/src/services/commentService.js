@@ -14,11 +14,12 @@ export const getAll = async (blogPostId) => {
 };
 
 export const create = async (blogPostId, text) => {
+  console.log(blogPostId);
   const newComment = await request.post(baseUrl, {
     blogPostId,
     text,
   });
-
+  console.log("EEEEEE", newComment);
   return newComment;
 };
 
