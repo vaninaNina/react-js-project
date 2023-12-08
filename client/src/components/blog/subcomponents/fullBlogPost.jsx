@@ -38,13 +38,20 @@ const FullBlogPost = () => {
     });
   };
 
-  // const deleteCommentHandler = async (blogPostId, commentId) => {
-  //   try {
-  //     await commentService.del(blogPostId, commentId);
-  //   } catch (error) {
-  //     console.error("Error deleting comment:", error);
-  //   }
-  // };
+  const deleteCommentHandler = async (commentId) => {
+    try {
+      await commentService.del(commentId);
+      const updatedComments = comments.filter(
+        (comment) => comment._id !== commentId,
+      );
+      dispatch({
+        type: "GET_ALL_COMMENTS",
+        payload: updatedComments,
+      });
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+    }
+  };
 
   const deleteButtonClickHandler = async () => {
     const hasConfirmed = confirm(
@@ -96,12 +103,12 @@ const FullBlogPost = () => {
                 {email}: {text}
                 {/* {console.log(comments[1].owner.email)} */}
               </p>
-              {/* <button
+              <button
                 className="button"
-                onClick={deleteCommentHandler(blogPostId, _id)}
+                onClick={() => deleteCommentHandler(_id)}
               >
                 Delete comment
-              </button> */}
+              </button>
             </li>
           ))}
         </ul>
