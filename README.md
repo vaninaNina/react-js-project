@@ -19,7 +19,7 @@ Run these commands from the root folder of the project:
 
 Running the project:
 
-[!] Please make sure Installation step has been completed before attempting to run the project
+[!IMPORTANT] Please make sure Installation step has been completed before attempting to run the project
 
 - Start the server
 
