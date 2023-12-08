@@ -21,10 +21,7 @@ export const addLike = async (postId) => {
 
 export const removeLike = async (postId) => {
   try {
-    console.log(postId);
-    await request.del(baseUrl, {
-      postId,
-    });
+    await request.del(`${baseUrl}/${postId}`);
   } catch (e) {
     console.log(e);
   }

@@ -12,18 +12,24 @@ const Post = () => {
   const { email, userId, isAuthenticated } = useContext(AuthContext);
   const [likes, setLikes] = useState(0);
   const [hasLiked, setHasLiked] = useState(false);
+  const [userLike, setUserLike] = useState(null);
 
   const getPost = async () => {
     const response = await nftService.getOne(postId);
-    const likesArray = await likesService.getAll(postId);
-    const userLike = likesArray.findIndex((like) => like._ownerId === userId);
-    console.log(likesArray);
-    setLikes(likesArray.length || 0);
     setData(response);
-    setHasLiked(userLike === -1 ? false : true);
   };
+
+  const getLikesList = async () => {
+    const likesArray = await likesService.getAll(postId);
+    const like = likesArray.findIndex((like) => like._ownerId === userId);
+    setUserLike(likesArray[like] || null);
+    setLikes(likesArray.length || 0);
+    setHasLiked(like === -1 ? false : true);
+  };
+
   useEffect(() => {
     getPost();
+    getLikesList();
   }, []);
 
   const handleLike = async () => {
@@ -34,11 +40,12 @@ const Post = () => {
     if (hasLiked) {
       setLikes(likes - 1);
       setHasLiked(false);
-      await likesService.removeLike(postId);
+
+      await likesService.removeLike(userLike._id);
+      setUserLike(null);
     } else {
-      setLikes(likes + 1);
-      setHasLiked(true);
       await likesService.addLike(postId);
+      await getLikesList();
     }
   };
 
