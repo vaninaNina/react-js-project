@@ -14,7 +14,7 @@ const BlogPostCard = ({ img, title, text, _id, author }) => {
 
       <span>
         <Link to={`/blogPost/${_id}`} className="button button-alt">
-          Open and Comment
+          Open Blog Post
         </Link>
       </span>
     </article>
